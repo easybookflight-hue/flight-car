@@ -1,0 +1,31 @@
+Timestamp,Origin,Destination,Departure Date,Return Date,Trip Type,Adults,Cabin Class,IP Address
+2026-08-04 15:22:42,DEL,BOM,,,one-way,1,economy,127.0.0.1
+2026-08-05 17:38:37,JFK,LHR,,,one-way,1,economy,127.0.0.1
+2026-08-05 17:39:18,DEL,LHR,,2026-09-30,round-trip,1,economy,127.0.0.1
+2026-08-05 17:40:48,Vivek Singh,+91 8888888888,DEL,JFK,2026-10-01,,one-way,1,Economy,127.0.0.1
+2026-08-05 17:54:38,Amit Kumar,+91 9111111111,DEL,NYC,2026-12-01,2026-12-15,round-trip,1,Economy,127.0.0.1
+2026-08-05 18:40:34,Test lead browser,'+1 1234567890,LAX,JFK,2026-01-09,,one-way,1,economy,127.0.0.1
+2026-08-05 18:40:47,Test lead browser,'+1 1234567890,LAX,JFK,2026-01-09,,one-way,1,economy,127.0.0.1
+2026-08-05 19:09:28,Test Search Traveler,+1 8887776666,LAX,JFK,2026-09-15,,one-way,2,Business,127.0.0.1
+2026-08-05 19:12:03,Sheet Only Traveler,+1 8887776666,LAX,JFK,2026-09-15,,one-way,2,Business,127.0.0.1
+2026-08-05 19:12:39,Direct Sheet Search Test,+1 8887776666,SFO,LHR,2026-09-20,,one-way,1,Economy,127.0.0.1
+2026-08-05 19:26:33,New Sheet User,+1 4158889999,JFK,LHR,2026-10-15,,one-way,2,Business,127.0.0.1
+2026-08-05 19:29:19,Rahul Varma,'+1 9876543210,DEL,JFK,2026-09-04,,one-way,1,economy,127.0.0.1
+2026-08-05 19:29:22,Rahul Varma,'+1 9876543210,DEL,JFK,2026-09-04,,one-way,1,economy,127.0.0.1
+2026-08-05 19:30:27,Traveler,'+1 1234567890,DEL,PAT,2026-09-04,,one-way,2,economy,127.0.0.1
+2026-08-05 19:30:31,Traveler,'+1 1234567890,DEL,PAT,2026-09-04,,one-way,2,economy,127.0.0.1
+2026-08-05 19:30:33,Traveler,'+1 1234567890,DEL,PAT,2026-09-04,,one-way,2,economy,127.0.0.1
+2026-08-05 19:30:36,Traveler,'+1 1234567890,DEL,PAT,2026-09-04,,one-way,2,economy,127.0.0.1
+2026-08-05 19:30:38,Traveler,'+1 1234567890,DEL,PAT,2026-09-04,,one-way,2,economy,127.0.0.1
+2026-08-05 19:30:40,Traveler,'+1 1234567890,DEL,PAT,2026-09-04,,one-way,2,economy,127.0.0.1
+2026-08-05 19:30:43,Traveler,'+1 1234567890,DEL,PAT,2026-09-04,,one-way,2,economy,127.0.0.1
+2026-08-05 19:30:46,Traveler,'+1 1234567890,DEL,PAT,2026-09-04,,one-way,2,economy,127.0.0.1
+2026-08-05 19:30:48,Traveler,'+1 1234567890,DEL,PAT,2026-09-04,,one-way,2,economy,127.0.0.1
+2026-08-05 19:30:51,Traveler,'+1 1234567890,DEL,PAT,2026-09-04,,one-way,2,economy,127.0.0.1
+2026-08-05 19:43:13,Website Live Test User,+1 9876543210,DEL,JFK,2026-11-01,,one-way,2,Business,127.0.0.1
+2026-08-05 19:58:23,Direct Sheet Search Only,+1 8880001111,JFK,LHR,2026-11-15,,one-way,1,First,127.0.0.1
+2026-08-05 19:59:12,Pure Sheet Traveler,+1 8880009999,LAX,DXB,2026-12-01,,one-way,2,Business,127.0.0.1
+2026-08-05 20:00:05,Pure Sheet Traveler,+1 8880009999,LAX,DXB,2026-12-01,,one-way,2,Business,127.0.0.1
+2026-08-05 20:10:20,New Sheet Final Searcher,+1 9998887777,DEL,LHR,2026-11-20,,one-way,2,Business,127.0.0.1
+2026-08-05 20:13:13,Traveler,'+1 1234567890,NYS,NQY,2026-09-04,,one-way,1,economy,127.0.0.1
+2026-08-05 20:13:15,Traveler,'+1 1234567890,NYS,NQY,2026-09-04,,one-way,1,economy,127.0.0.1

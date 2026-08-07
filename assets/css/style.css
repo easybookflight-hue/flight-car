@@ -1,0 +1,728 @@
+/* ==========================================================
+   SkyFare / Cheap Flights US — Custom Styles
+   Mobile-first, ultra-premium design, Modal & Search Form
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  font-family: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html { scroll-behavior: smooth; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 3px; }
+
+/* ── Header Call CTA Button (Ultra Premium with Shine) ───── */
+.btn-header-cta {
+  background: linear-gradient(135deg, #1a6bff 0%, #0054e0 100%);
+  color: #ffffff !important;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: 0.85rem;
+  box-shadow: 0 4px 16px rgba(26, 107, 255, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none !important;
+}
+.btn-header-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(26, 107, 255, 0.5);
+}
+.btn-header-cta::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: rotate(30deg);
+  animation: shine 4s infinite;
+}
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  25%, 100% { transform: translateX(100%) rotate(30deg); }
+}
+
+/* ── Ultra-Sleek Search Form (Screenshot 2 Fix) ─────────── */
+.search-box {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 56px -10px rgba(15,23,42,.22), 0 0 0 1px rgba(226,232,240,.8);
+  padding: 1.5rem 1.75rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .search-box {
+    padding: 1.1rem 1rem;
+    border-radius: 1.25rem;
+  }
+}
+
+.search-field-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-field-group label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.search-field-group input:not([type="checkbox"]):not([type="radio"]),
+.search-field-group select.field-select {
+  width: 100%;
+  height: 44px;
+  padding: 0.45rem 0.75rem 0.45rem 2.4rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0f172a;
+  background: #f8fafc;
+  outline: none;
+  transition: all 0.15s ease-in-out;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.search-field-group input:focus,
+.search-field-group select.field-select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.12);
+  background: #fff;
+}
+
+/* Fix field icon vertical alignment inside input (Screenshot 2 Fix) */
+.search-field-group .field-icon {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 13px;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.phone-input-wrap {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: #f8fafc;
+  overflow: hidden;
+  transition: all 0.15s ease-in-out;
+  box-sizing: border-box;
+}
+
+.phone-input-wrap:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.12);
+  background: #fff;
+}
+
+.phone-input-wrap select {
+  width: auto !important;
+  height: 100% !important;
+  padding: 0 0.65rem !important;
+  border: none !important;
+  border-right: 1.5px solid #e2e8f0 !important;
+  border-radius: 0 !important;
+  background: #f1f5f9 !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.phone-input-wrap input {
+  flex: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 0.75rem !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+.swap-btn {
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 8px rgba(15,23,42,.08);
+  flex-shrink: 0;
+}
+.swap-btn:hover {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
+  transform: rotate(180deg);
+}
+
+.trip-pill { cursor: pointer; }
+.trip-pill.active {
+  background: #0f172a;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(15,23,42,.2);
+}
+
+.autocomplete-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 16px 36px -4px rgba(15,23,42,.16);
+  z-index: 50;
+  max-height: 240px;
+  overflow-y: auto;
+  display: none;
+}
+.autocomplete-dropdown.open { display: block; }
+.autocomplete-item {
+  padding: 0.55rem 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  transition: background 0.1s;
+}
+.autocomplete-item:hover { background: #f8fafc; }
+.autocomplete-item .code {
+  font-weight: 800;
+  color: #3b82f6;
+  background: #eff6ff;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.35rem;
+  font-size: 0.75rem;
+}
+
+/* ── Mega Menu Styles ────────────────────────────────────────── */
+.has-megamenu { position: relative; }
+.megamenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 92vw;
+  max-width: 980px;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 60px -10px rgba(15,23,42,0.22), 0 0 0 1px rgba(226,232,240,0.8);
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-out;
+  z-index: 100;
+  pointer-events: none;
+}
+.has-megamenu:hover .megamenu,
+.has-megamenu:focus-within .megamenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+/* ── Popular Destinations Carousel (Fixed Layout) ───────────── */
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 0.5rem 0 1rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: max-content;
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+}
+
+.carousel-card {
+  width: 270px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .carousel-card {
+    width: 240px;
+  }
+}
+
+.dest-card {
+  position: relative;
+  height: 325px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.16);
+  transition: all 0.3s ease;
+  display: block;
+}
+.dest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -5px rgba(15, 23, 42, 0.28);
+}
+
+.carousel-floating-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18);
+  cursor: pointer;
+  z-index: 25;
+  transition: all 0.2s ease;
+}
+.carousel-floating-btn:hover {
+  background: #1a6bff;
+  color: #ffffff;
+  border-color: #1a6bff;
+}
+.carousel-floating-btn.left-btn { left: -16px; }
+.carousel-floating-btn.right-btn { right: -16px; }
+
+/* ── Flight cards ────────────────────────────────────────────── */
+.flight-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 12px rgba(15,23,42,.06);
+  padding: 1.25rem;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+.flight-card:hover {
+  box-shadow: 0 12px 36px -6px rgba(15,23,42,.14);
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+.exclusive-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #047857;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+}
+
+.route-line {
+  height: 2px;
+  background: #e2e8f0;
+  width: 100%;
+}
+.route-plane-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.price-tag {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 0.4rem;
+}
+.stop-badge-direct { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+.stop-badge-one    { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
+.stop-badge-multi  { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
+
+.btn-book-now {
+  background: #1a6bff;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.84rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.75rem;
+  transition: all 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(26,107,255,.3);
+  text-decoration: none;
+}
+.btn-book-now:hover {
+  background: #0054e0;
+  box-shadow: 0 6px 20px rgba(26,107,255,.45);
+  transform: translateY(-1px);
+}
+
+/* ── Filter Sidebar ─────────────────────────────────────────── */
+.filter-panel {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  border: 1px solid #e2e8f0;
+  padding: 1.25rem;
+  box-shadow: 0 2px 12px rgba(15,23,42,.06);
+}
+
+.filter-section-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569;
+  margin-bottom: 0.6rem;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: #334155;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  transition: color 0.1s;
+}
+.filter-checkbox:hover { color: #0f172a; }
+.filter-checkbox input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  border: 1.5px solid #cbd5e1;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+/* ── Sort tabs ──────────────────────────────────────────────── */
+.sort-tab {
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1.5px solid #e2e8f0;
+  background: #fff;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.sort-tab.active {
+  background: #0f172a;
+  color: #fff;
+  border-color: #0f172a;
+  box-shadow: 0 2px 8px rgba(15,23,42,.2);
+}
+
+/* ── Modal Overlay & Dialog (Screenshot 1 Premium Design) ──── */
+.flight-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,23,42,.7);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out;
+}
+.flight-modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.flight-modal {
+  background: #fff;
+  border-radius: 1.5rem;
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 25px 65px -10px rgba(15,23,42,.35);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Skeleton loaders ───────────────────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: skeletonLoading 1.5s infinite;
+}
+@keyframes skeletonLoading {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Sticky search bar (results page) ──────────────────────── */
+.sticky-search-bar {
+  position: sticky;
+  top: 64px;
+  z-index: 40;
+  background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+  padding: 0.65rem 1rem;
+  box-shadow: 0 4px 16px rgba(15,23,42,.15);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* ── Sticky Bottom CTA Bar Fix (Dark High-Contrast Theme) ───── */
+.sticky-cta-bar {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: #0d1b3e !important;
+  background: linear-gradient(90deg, #091228 0%, #0f172a 50%, #1a2c56 100%) !important;
+  z-index: 9999 !important;
+  padding: 0.65rem 1rem !important;
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.45) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+.sticky-cta-bar p, .sticky-cta-bar span {
+  color: #ffffff !important;
+}
+.sticky-cta-bar p.sub-text {
+  color: #cbd5e1 !important;
+}
+
+body {
+  padding-bottom: 72px !important;
+}
+
+/* ── Responsive adjustments ─────────────────────────────────── */
+@media (max-width: 767px) {
+  .megamenu { display: none !important; }
+  body { padding-bottom: 70px !important; }
+}
+
+/* ── Section Tag Badge ───────────────────────────────────────── */
+.section-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  color: #1a6bff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  border: 1px solid #bfdbfe;
+  margin-bottom: 0.65rem;
+}
+
+/* ── Stats Cards (2M+ Flights, 500+ Airlines, etc.) ──────────── */
+.stat-hover-card {
+  background: #ffffff;
+  border: 1.5px solid #e8edf5;
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+.stat-hover-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  background: linear-gradient(135deg, rgba(26, 107, 255, 0.03) 0%, rgba(26, 107, 255, 0.01) 100%);
+}
+.stat-hover-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -8px rgba(15, 23, 42, 0.16);
+  border-color: #bfdbfe;
+}
+.stat-hover-card:hover::before {
+  opacity: 1;
+}
+
+.stat-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  transition: transform 0.25s ease;
+}
+.stat-hover-card:hover .stat-icon-wrap {
+  transform: scale(1.12) rotate(-3deg);
+}
+
+.stat-number {
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.02em;
+}
+.stat-label {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.stat-desc {
+  font-size: 0.74rem;
+  color: #64748b;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* ── FAQ Accordion (Modern Premium Design) ───────────────────── */
+.faq-item {
+  background: #ffffff;
+  border: 1.5px solid #e8edf5;
+  border-radius: 1rem;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 6px rgba(15, 23, 42, 0.04);
+}
+.faq-item:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 4px 16px rgba(26, 107, 255, 0.08);
+}
+.faq-item.open {
+  border-color: #1a6bff;
+  box-shadow: 0 8px 24px rgba(26, 107, 255, 0.12);
+}
+
+.faq-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+  font-family: inherit;
+  transition: color 0.15s ease;
+}
+.faq-item.open .faq-btn {
+  color: #1a6bff;
+}
+.faq-btn:hover {
+  color: #1a6bff;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.25s ease;
+  font-size: 0.84rem;
+  color: #475569;
+  line-height: 1.7;
+  padding: 0 1.25rem;
+  font-weight: 500;
+}
+.faq-item.open .faq-body {
+  max-height: 400px;
+  padding: 0 1.25rem 1.1rem;
+}
+
+/* ── Destination Card Arrow Badge ────────────────────────────── */
+.dest-card-arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+.dest-card:hover .dest-card-arrow {
+  background: rgba(26, 107, 255, 0.85);
+  border-color: #1a6bff;
+  transform: scale(1.1);
+}
+

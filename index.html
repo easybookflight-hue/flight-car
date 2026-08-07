@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheap Flights US — Book Cheap International Flights | Compare Airlines & OTAs</title>
+  <meta name="description" content="Search and compare real-time international flight prices. Best deals on flights to London, Dubai, Paris, Tokyo, Singapore and more. All prices in USD.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#0F172A', 700: '#1E293B', 500: '#334155' },
+            sky:  { DEFAULT: '#3B82F6', 600: '#2563EB', 400: '#60A5FA' },
+          },
+          fontFamily: { sans: ['Inter', 'Plus Jakarta Sans', 'sans-serif'] },
+          boxShadow: {
+            card:  '0 2px 16px rgba(15,23,42,.07)',
+            hover: '0 8px 30px rgba(15,23,42,.13)',
+            blue:  '0 4px 20px rgba(59,130,246,.3)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-navy font-sans antialiased">
+
+<!-- TOP SUPPORT STRIP (SINGLE CLEAN HEADER) -->
+<div class="bg-navy text-white text-xs py-2 hidden md:block border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+    <div class="flex items-center gap-3 text-slate-300">
+      <span class="inline-flex items-center gap-1.5 bg-white/10 px-2.5 py-0.5 rounded-full text-[11px] font-semibold text-sky-400">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Live Rates
+      </span>
+      <span>✈ Cheap Flights US — Compare &amp; Book Cheap Flights Worldwide</span>
+    </div>
+    <a href="tel:+1-888-885-5061" class="flex items-center gap-1.5 text-sky-400 font-extrabold hover:text-sky-300 transition-colors">
+      <i data-lucide="phone-call" class="w-3.5 h-3.5 animate-pulse text-emerald-400"></i>
+      +1 (888) 885-5061 &nbsp;·&nbsp; <span class="text-slate-400 font-normal">24/7 Support</span>
+    </a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="bg-white border-b border-slate-100 sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between py-2.5">
+    <!-- 1. LOGO -->
+    <a href="index.html" class="flex-shrink-0">
+      <img src="assets/images/logo_header.png" alt="Cheap Flights US" class="h-10 sm:h-12 w-auto" onerror="this.src='assets/images/logo.png'">
+    </a>
+
+    <!-- 2. DESKTOP MENU WITH MEGA MENU -->
+    <ul class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+      <li><a href="index.html" class="text-navy font-semibold">Home</a></li>
+
+      <!-- Mega Menu Item -->
+      <li class="has-megamenu py-3">
+        <a href="results.html" class="flex items-center gap-1 hover:text-navy transition-colors">
+          Flights &amp; Deals
+          <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+        </a>
+
+        <!-- Mega Menu Dropdown -->
+        <div class="megamenu">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-left">
+            <!-- Col 1: Popular Airlines with Real Logos -->
+            <div class="space-y-3">
+              <h4 class="font-extrabold text-navy text-xs uppercase tracking-wider border-b border-slate-100 pb-2 flex items-center gap-1.5">
+                <i data-lucide="plane" class="w-3.5 h-3.5 text-sky"></i> Top Airlines
+              </h4>
+              <ul class="space-y-2 text-xs text-slate-600 font-medium">
+                <li>
+                  <a href="results.html?from=JFK&to=DXB" class="hover:text-sky flex items-center gap-2.5 py-1">
+                    <img src="https://images.kiwi.com/airlines/64x64/EK.png" alt="Emirates" class="w-5 h-5 rounded object-contain border border-slate-200 p-0.5">
+                    <span>Emirates Fares</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="results.html?from=JFK&to=DOH" class="hover:text-sky flex items-center gap-2.5 py-1">
+                    <img src="https://images.kiwi.com/airlines/64x64/QR.png" alt="Qatar Airways" class="w-5 h-5 rounded object-contain border border-slate-200 p-0.5">
+                    <span>Qatar Airways Deals</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="results.html?from=JFK&to=LHR" class="hover:text-sky flex items-center gap-2.5 py-1">
+                    <img src="https://images.kiwi.com/airlines/64x64/BA.png" alt="British Airways" class="w-5 h-5 rounded object-contain border border-slate-200 p-0.5">
+                    <span>British Airways Fares</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="results.html?from=DEL&to=BOM" class="hover:text-sky flex items-center gap-2.5 py-1">
+                    <img src="https://images.kiwi.com/airlines/64x64/6E.png" alt="IndiGo" class="w-5 h-5 rounded object-contain border border-slate-200 p-0.5">
+                    <span>IndiGo &amp; Air India</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="results.html?from=LAX&to=HND" class="hover:text-sky flex items-center gap-2.5 py-1">
+                    <img src="https://images.kiwi.com/airlines/64x64/SQ.png" alt="Singapore Airlines" class="w-5 h-5 rounded object-contain border border-slate-200 p-0.5">
+                    <span>Singapore Airlines</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 2: Popular Flight Routes -->
+            <div class="space-y-3">
+              <h4 class="font-extrabold text-navy text-xs uppercase tracking-wider border-b border-slate-100 pb-2 flex items-center gap-1.5">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-sky"></i> Popular Routes
+              </h4>
+              <ul class="space-y-2 text-xs text-slate-600 font-medium">
+                <li><a href="results.html?from=JFK&to=LHR" class="hover:text-sky flex items-center justify-between py-1"><span>New York ➔ London</span><span class="text-sky font-bold">$299</span></a></li>
+                <li><a href="results.html?from=LAX&to=DXB" class="hover:text-sky flex items-center justify-between py-1"><span>Los Angeles ➔ Dubai</span><span class="text-sky font-bold">$389</span></a></li>
+                <li><a href="results.html?from=ORD&to=CDG" class="hover:text-sky flex items-center justify-between py-1"><span>Chicago ➔ Paris</span><span class="text-sky font-bold">$349</span></a></li>
+                <li><a href="results.html?from=MIA&to=SIN" class="hover:text-sky flex items-center justify-between py-1"><span>Miami ➔ Singapore</span><span class="text-sky font-bold">$529</span></a></li>
+                <li><a href="results.html?from=SFO&to=SYD" class="hover:text-sky flex items-center justify-between py-1"><span>San Francisco ➔ Sydney</span><span class="text-sky font-bold">$649</span></a></li>
+              </ul>
+            </div>
+
+            <!-- Col 3: Fare Categories with Premium Lucide Icons -->
+            <div class="space-y-3">
+              <h4 class="font-extrabold text-navy text-xs uppercase tracking-wider border-b border-slate-100 pb-2 flex items-center gap-1.5">
+                <i data-lucide="tag" class="w-3.5 h-3.5 text-sky"></i> Fare Categories
+              </h4>
+              <ul class="space-y-2 text-xs text-slate-600 font-medium">
+                <li><a href="results.html?cabin=business" class="hover:text-sky flex items-center gap-2 py-1"><i data-lucide="gem" class="w-3.5 h-3.5 text-indigo-500"></i> Business Class Specials</a></li>
+                <li><a href="results.html?trip=round-trip" class="hover:text-sky flex items-center gap-2 py-1"><i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-emerald-500"></i> Round Trip Super Saver</a></li>
+                <li><a href="results.html?cabin=first" class="hover:text-sky flex items-center gap-2 py-1"><i data-lucide="crown" class="w-3.5 h-3.5 text-amber-500"></i> First Class Deals</a></li>
+                <li><a href="contact.html" class="hover:text-sky flex items-center gap-2 py-1"><i data-lucide="zap" class="w-3.5 h-3.5 text-yellow-500"></i> Last-Minute Phone Discounts</a></li>
+                <li><a href="contact.html" class="hover:text-sky flex items-center gap-2 py-1"><i data-lucide="users" class="w-3.5 h-3.5 text-sky-500"></i> Family &amp; Group Discounts</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 4: Expert Phone Support Card -->
+            <div class="bg-gradient-to-br from-navy to-slate-900 text-white p-4 rounded-2xl border border-white/10 space-y-3 flex flex-col justify-between shadow-md">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden border border-emerald-400/40 relative flex-shrink-0">
+                  <img src="assets/images/footer_sticky_agent.jpg" alt="Agent" class="w-full h-full object-cover" onerror="this.src='assets/images/agent.jpg'">
+                  <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 border border-slate-900"></span>
+                </div>
+                <div>
+                  <span class="bg-sky/20 text-sky-300 text-[10px] font-black px-2 py-0.5 rounded border border-sky-400/30 uppercase tracking-wider inline-block">Phone Only Rates</span>
+                  <h5 class="font-extrabold text-xs text-white">Save Up to 40% Extra</h5>
+                </div>
+              </div>
+              <p class="text-[11px] text-slate-300 leading-relaxed">Speak to our 24/7 flight experts to unlock unlisted airline fares.</p>
+              <a href="tel:+1-888-885-5061" class="btn-header-cta justify-center">
+                <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+                Call +1 (888) 885-5061
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="about.html" class="hover:text-navy transition-colors">About Us</a></li>
+      <li><a href="contact.html" class="hover:text-navy transition-colors">Contact</a></li>
+    </ul>
+
+    <!-- 3. RIGHT SIDE CTA & MOBILE MENU BUTTON -->
+    <div class="flex items-center gap-2 sm:gap-3">
+      <a href="tel:+1-888-885-5061" class="btn-header-cta text-xs sm:text-sm py-2 px-3 sm:py-2.5 sm:px-4">
+        <i data-lucide="phone-call" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"></i>
+        <span class="hidden sm:inline">+1 (888) 885-5061</span>
+        <span class="sm:hidden font-extrabold">Call Now</span>
+      </a>
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl text-navy hover:bg-slate-100 transition-colors border border-slate-200">
+        <i data-lucide="menu" class="w-5 h-5 text-navy"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto">
+    <ul class="space-y-1 text-sm font-semibold text-slate-700">
+      <li><a href="index.html" class="block py-2 px-3 rounded-xl hover:bg-slate-100 transition-colors">Home</a></li>
+      <li><a href="results.html" class="block py-2 px-3 rounded-xl hover:bg-slate-100 transition-colors text-sky font-bold">Search Flights &amp; Deals</a></li>
+      <li><a href="about.html" class="block py-2 px-3 rounded-xl hover:bg-slate-100 transition-colors">About Us</a></li>
+      <li><a href="contact.html" class="block py-2 px-3 rounded-xl hover:bg-slate-100 transition-colors">Contact Us</a></li>
+      <li><a href="privacy.html" class="block py-2 px-3 rounded-xl hover:bg-slate-100 transition-colors">Privacy Policy</a></li>
+    </ul>
+
+    <!-- Mobile Mega Menu Accordion Sections -->
+    <div class="space-y-3 pt-3 border-t border-slate-100">
+      <div>
+        <p class="text-[11px] font-black uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">
+          <i data-lucide="plane" class="w-3.5 h-3.5 text-sky"></i> Top Airlines
+        </p>
+        <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+          <a href="results.html?from=JFK&to=DXB" class="flex items-center gap-2 p-2 bg-slate-50 rounded-lg border border-slate-200">
+            <img src="https://images.kiwi.com/airlines/64x64/EK.png" alt="Emirates" class="w-4 h-4 rounded object-contain">
+            <span>Emirates</span>
+          </a>
+          <a href="results.html?from=JFK&to=DOH" class="flex items-center gap-2 p-2 bg-slate-50 rounded-lg border border-slate-200">
+            <img src="https://images.kiwi.com/airlines/64x64/QR.png" alt="Qatar" class="w-4 h-4 rounded object-contain">
+            <span>Qatar Airways</span>
+          </a>
+          <a href="results.html?from=JFK&to=LHR" class="flex items-center gap-2 p-2 bg-slate-50 rounded-lg border border-slate-200">
+            <img src="https://images.kiwi.com/airlines/64x64/BA.png" alt="British Airways" class="w-4 h-4 rounded object-contain">
+            <span>British Airways</span>
+          </a>
+          <a href="results.html?from=LAX&to=HND" class="flex items-center gap-2 p-2 bg-slate-50 rounded-lg border border-slate-200">
+            <img src="https://images.kiwi.com/airlines/64x64/SQ.png" alt="Singapore" class="w-4 h-4 rounded object-contain">
+            <span>Singapore Air</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-2 border-t border-slate-100">
+      <a href="tel:+1-888-885-5061" class="btn-header-cta w-full justify-center py-3">
+        <i data-lucide="phone-call" class="w-4 h-4"></i> Call +1 (888) 885-5061
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-[550px] flex items-center py-16 sm:py-20 overflow-hidden" style="background:linear-gradient(160deg,#0F172A 0%,#1E3A5F 55%,#1A4A7A 100%);">
+  <div class="absolute inset-0 overflow-hidden opacity-10">
+    <svg class="absolute right-0 top-0 w-full h-full" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="600" cy="100" r="280" fill="#3B82F6" fill-opacity=".4"/>
+      <circle cx="200" cy="500" r="180" fill="#60A5FA" fill-opacity=".2"/>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 relative w-full">
+    <div class="text-center mb-8 sm:mb-10">
+      <div class="inline-block text-[11px] sm:text-xs font-bold uppercase tracking-widest text-sky-400 bg-white/10 border border-white/20 px-3.5 py-1.5 rounded-full mb-4">✈ International Flight Deals</div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-3 break-words">
+        Compare &amp; Book<br class="hidden sm:inline">
+        <span class="text-sky-400">Cheap Flights</span> Worldwide
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">Real-time prices from top airlines and OTAs. Best fares on international routes — all in <strong class="text-white">USD</strong>.</p>
+    </div>
+
+    <!-- SEARCH FORM -->
+    <div class="search-box max-w-4xl mx-auto shadow-2xl relative z-30">
+      <!-- Trip type pills -->
+      <div class="inline-flex items-center bg-slate-100 p-1 rounded-xl mb-4 gap-1">
+        <button type="button" class="trip-pill active text-xs font-bold px-4 py-1.5 rounded-lg transition-all" data-type="one-way" onclick="setTrip(this)">One Way</button>
+        <button type="button" class="trip-pill text-xs font-semibold text-slate-600 px-4 py-1.5 rounded-lg transition-all hover:text-navy" data-type="round-trip" onclick="setTrip(this)">Round Trip</button>
+        <input type="hidden" id="tripType" value="one-way">
+      </div>
+
+      <form id="searchForm" novalidate onsubmit="return doSearch(event)">
+        <!-- ROW 1: From & To with Compact Swap Button -->
+        <div class="mb-3">
+          <!-- Mobile: stacked with minimal gap, swap button overlaid between them -->
+          <div class="relative flex flex-col md:grid md:grid-cols-[1fr_2.5rem_1fr] gap-0 md:gap-2.5">
+
+            <!-- From -->
+            <div class="search-field-group relative">
+              <label for="originInput">From</label>
+              <svg xmlns="http://www.w3.org/2000/svg" class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <input type="text" id="originInput" placeholder="City or Airport" autocomplete="off">
+              <input type="hidden" id="originCode">
+              <div class="autocomplete-dropdown" id="originDropdown"></div>
+            </div>
+
+            <!-- Swap Button: absolute on mobile (overlaid between fields), normal on md+ -->
+            <div class="md:flex md:items-end md:justify-center md:pb-[1px]
+                        absolute right-2 top-[50px] z-10 md:static md:z-auto">
+              <button type="button" class="swap-btn" id="swapBtn" title="Swap Origin &amp; Destination" onclick="swapOriginDest()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+              </button>
+            </div>
+
+            <!-- To -->
+            <div class="search-field-group relative mt-2 md:mt-0">
+              <label for="destInput">To</label>
+              <svg xmlns="http://www.w3.org/2000/svg" class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <input type="text" id="destInput" placeholder="City or Airport" autocomplete="off">
+              <input type="hidden" id="destCode">
+              <div class="autocomplete-dropdown" id="destDropdown"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 2: Dates (Depart & Return) + Travelers -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3" id="datesRow">
+          <!-- Depart -->
+          <div class="search-field-group">
+            <label for="depDate">Depart</label>
+            <svg xmlns="http://www.w3.org/2000/svg" class="field-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <input type="date" id="depDate">
+          </div>
+
+          <!-- Return Date (Side-by-side with Depart) -->
+          <div class="search-field-group" id="retDateBox" style="display:none">
+            <label for="retDate">Return Date</label>
+            <svg xmlns="http://www.w3.org/2000/svg" class="field-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <input type="date" id="retDate">
+          </div>
+
+          <!-- Travelers & Cabin -->
+          <div class="search-field-group">
+            <label>Travelers &amp; Cabin</label>
+            <div class="relative">
+              <svg xmlns="http://www.w3.org/2000/svg" class="field-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <button type="button" onclick="document.getElementById('paxPopup').classList.toggle('hidden')"
+                class="w-full text-left border border-slate-200 rounded-[0.75rem] bg-slate-50 px-3 py-2 pl-9 text-xs font-semibold text-navy outline-none focus:border-sky truncate h-[42px]" id="paxBtn">
+                1 Traveler · Economy
+              </button>
+
+              <!-- TRAVELERS & CABIN POPUP -->
+              <div id="paxPopup" class="hidden absolute top-full md:top-auto md:bottom-full right-0 mt-2 md:mb-2 bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 p-5 w-full md:w-[320px]">
+                <!-- Adults -->
+                <div class="flex items-center justify-between py-2.5 border-b border-slate-100">
+                  <div>
+                    <p class="font-bold text-navy text-sm">Adults</p>
+                    <p class="text-[11px] text-slate-400">Age 12+</p>
+                  </div>
+                  <div class="flex items-center gap-2.5">
+                    <button type="button" onclick="changePax('adults', -1)" class="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center font-bold text-base text-slate-600 hover:border-sky hover:text-sky transition-colors">−</button>
+                    <span id="adultsCount" class="font-bold text-sm text-navy w-4 text-center">1</span>
+                    <button type="button" onclick="changePax('adults', 1)" class="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center font-bold text-base text-slate-600 hover:border-sky hover:text-sky transition-colors">+</button>
+                  </div>
+                </div>
+
+                <!-- Children -->
+                <div class="flex items-center justify-between py-2.5 border-b border-slate-100">
+                  <div>
+                    <p class="font-bold text-navy text-sm">Children</p>
+                    <p class="text-[11px] text-slate-400">Ages 2-11</p>
+                  </div>
+                  <div class="flex items-center gap-2.5">
+                    <button type="button" onclick="changePax('children', -1)" class="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center font-bold text-base text-slate-600 hover:border-sky hover:text-sky transition-colors">−</button>
+                    <span id="childrenCount" class="font-bold text-sm text-navy w-4 text-center">0</span>
+                    <button type="button" onclick="changePax('children', 1)" class="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center font-bold text-base text-slate-600 hover:border-sky hover:text-sky transition-colors">+</button>
+                  </div>
+                </div>
+
+                <!-- Infants -->
+                <div class="flex items-center justify-between py-2.5 border-b border-slate-100">
+                  <div>
+                    <p class="font-bold text-navy text-sm">Infants</p>
+                    <p class="text-[11px] text-slate-400">Under 2, on lap</p>
+                  </div>
+                  <div class="flex items-center gap-2.5">
+                    <button type="button" onclick="changePax('infants', -1)" class="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center font-bold text-base text-slate-600 hover:border-sky hover:text-sky transition-colors">−</button>
+                    <span id="infantsCount" class="font-bold text-sm text-navy w-4 text-center">0</span>
+                    <button type="button" onclick="changePax('infants', 1)" class="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center font-bold text-base text-slate-600 hover:border-sky hover:text-sky transition-colors">+</button>
+                  </div>
+                </div>
+
+                <!-- Cabin Class -->
+                <div class="pt-3">
+                  <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Cabin Class</label>
+                  <select id="cabinClass" onchange="updateTravelersLabel()" class="w-full border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold text-navy outline-none focus:border-sky bg-slate-50 mb-4 field-select">
+                    <option value="economy">Economy</option>
+                    <option value="premium_economy">Premium Economy</option>
+                    <option value="business">Business</option>
+                    <option value="first">First Class</option>
+                  </select>
+                </div>
+
+                <button type="button" onclick="document.getElementById('paxPopup').classList.add('hidden')" class="w-full bg-navy text-white text-xs font-bold py-2.5 rounded-xl hover:bg-slate-800 transition-colors shadow-sm">Done</button>
+              </div>
+            </div>
+            <input type="hidden" id="adultsInput" value="1">
+            <input type="hidden" id="childrenInput" value="0">
+            <input type="hidden" id="infantsInput" value="0">
+          </div>
+        </div>
+
+        <!-- ROW 3: Customer Contact Info (Name + Phone) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4 pt-3 border-t border-slate-100">
+          <div class="search-field-group relative">
+            <label for="contactName">Customer Name</label>
+            <svg xmlns="http://www.w3.org/2000/svg" class="field-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            <input type="text" id="contactName" placeholder="Full Customer Name" autocomplete="name" required>
+          </div>
+
+          <div class="search-field-group">
+            <label for="contactPhone">Phone Number</label>
+            <div class="phone-input-wrap">
+              <select id="countryCode">
+                <option value="+1" selected>🇺🇸 USA (+1)</option>
+                <option value="+44">🇬🇧 UK (+44)</option>
+                <option value="+91">🇮🇳 IN (+91)</option>
+                <option value="+1">🇨🇦 CA (+1)</option>
+                <option value="+61">🇦🇺 AU (+61)</option>
+                <option value="+971">🇦🇪 UAE (+971)</option>
+                <option value="+49">🇩🇪 DE (+49)</option>
+                <option value="+33">🇫🇷 FR (+33)</option>
+              </select>
+              <input type="tel" id="contactPhone" placeholder="10-digit Phone Number" maxlength="10" autocomplete="tel" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <div>
+          <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-extrabold text-sm py-3 rounded-xl shadow-md shadow-blue-500/25 transition-all duration-200 hover:scale-[1.005] active:scale-[0.995] flex items-center justify-center gap-2 h-[44px]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Search Flights
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Trust badges -->
+    <div class="flex flex-wrap justify-center gap-6 mt-8 text-slate-300 text-sm">
+      <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-green-400"></i> Secure Booking</span>
+      <span class="flex items-center gap-1.5"><i data-lucide="zap" class="w-4 h-4 text-yellow-400"></i> Real-time Prices</span>
+      <span class="flex items-center gap-1.5"><i data-lucide="globe" class="w-4 h-4 text-sky-400"></i> 500+ Airlines</span>
+      <span class="flex items-center gap-1.5"><i data-lucide="headphones" class="w-4 h-4 text-purple-400"></i> 24/7 Support</span>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR DESTINATIONS (INFINITE RESPONSIVE CAROUSEL: 4.1 DESKTOP / 1.2 MOBILE) -->
+<!-- POPULAR DESTINATIONS (MATCHING REFERENCE IMAGE PERFECTLY) -->
+<section class="py-16 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 relative">
+    <div class="mb-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold leading-tight" style="color:#0D1B3E">
+        Popular <span style="color:#1a6bff">Destinations</span>
+      </h2>
+      <p class="text-slate-500 text-sm mt-2 max-w-3xl">Cheap Flights US helps travelers discover cheap flights online to some of the most popular travel destinations worldwide.</p>
+    </div>
+
+    <!-- Carousel Container with Side Floating Arrows -->
+    <div class="relative group/carousel">
+      <!-- Floating Left Arrow -->
+      <button id="destPrevBtn" class="carousel-floating-btn left-btn" aria-label="Previous Destinations">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+
+      <!-- Track Container -->
+      <div class="carousel-container" id="destCarouselContainer">
+        <div class="carousel-track" id="destGrid"></div>
+      </div>
+
+      <!-- Floating Right Arrow -->
+      <button id="destNextBtn" class="carousel-floating-btn right-btn" aria-label="Next Destinations">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- EXCLUSIVE DEALS -->
+<section class="py-16 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <span class="section-tag">Limited Time</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-navy mb-3">Exclusive Flight Deals</h2>
+      <p class="text-slate-500 max-w-xl mx-auto">Hand-picked international deals. Book before they're gone.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="dealsGrid"></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS (image left + steps right layout matching reference) -->
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl md:text-4xl font-extrabold" style="color:#0D1B3E">How Flight <span style="color:#1a6bff">Booking Works</span></h2>
+    </div>
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+
+      <!-- Left: Pill-shaped overlapping photos panel matching reference -->
+      <div class="flex-shrink-0 mx-auto relative" style="width:340px;height:360px">
+
+        <!-- Spiral line & Star decoration -->
+        <div class="absolute -top-2 right-4 pointer-events-none opacity-40">
+          <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#1a6bff" stroke-width="2">
+            <path d="M10,80 Q40,10 70,40 T90,20" stroke-dasharray="4 4"/>
+            <polygon points="90,15 93,23 101,23 94,28 97,36 90,31 83,36 86,28 79,23 87,23" fill="#1a6bff"/>
+          </svg>
+        </div>
+
+        <!-- Main photo: Woman by plane window (Pill shape) -->
+        <div class="absolute top-0 left-0 overflow-hidden shadow-2xl border-4 border-white"
+             style="width:210px;height:310px;border-radius:105px 105px 40px 40px;z-index:2">
+          <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=500&q=80" alt="Traveler in airplane" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Yellow "Book Now" Badge on main photo -->
+        <div class="absolute" style="top:25px;left:145px;z-index:10;transform:rotate(-6deg)">
+          <span class="bg-yellow-300 text-navy font-black text-[11px] px-3.5 py-1.5 rounded-full shadow-md tracking-tight uppercase flex items-center gap-1 border border-yellow-400">
+            Book Now &#8594;
+          </span>
+        </div>
+
+        <!-- Second photo: Beach with airplane (Pill shape overlapping) -->
+        <div class="absolute bottom-0 right-0 overflow-hidden shadow-2xl border-4 border-white"
+             style="width:160px;height:230px;border-radius:80px 80px 35px 35px;z-index:3">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Beach destination" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Right: steps -->
+      <div class="flex-1 space-y-0">
+
+        <!-- Step 1 -->
+        <div class="flex gap-4 items-start py-6 border-b border-slate-100 group">
+          <div class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center transition-all duration-200 group-hover:scale-110" style="background:#f1f5f9">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" style="color:#1a6bff" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div>
+            <h3 class="font-extrabold text-navy text-base mb-1">Search Flights</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Enter your travel information to search for cheap flights online and find routes that are available.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex gap-4 items-start py-6 border-b border-slate-100 group">
+          <div class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center transition-all duration-200 group-hover:scale-110" style="background:#f1f5f9">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" style="color:#1a6bff" fill="none" viewBox="0 0 24 24" stroke="currentColor"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+          </div>
+          <div>
+            <h3 class="font-extrabold text-navy text-base mb-1">Compare Airline Ticket Prices</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Examine the most recent airplane ticket prices and choose flights that are compatible with your travel schedule.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex gap-4 items-start py-6 group">
+          <div class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center transition-all duration-200 group-hover:scale-110" style="background:#dcfce7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" style="color:#16a34a" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-extrabold text-navy text-base mb-1">Complete Your Booking</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Make sure you secure the best air flight ticket booking quickly by filling out the booking form on our website.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS — Hover cards with icons -->
+<section class="py-14 bg-white">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+
+      <!-- Card 1: Flights Compared -->
+      <div class="stat-hover-card group">
+        <div class="stat-icon-wrap" style="background:#eff6ff">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" style="color:#1a6bff" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+        </div>
+        <p class="stat-number" style="color:#1a6bff">2M+</p>
+        <p class="stat-label">Flights Compared</p>
+        <p class="stat-desc">Real-time results from 500+ sources worldwide</p>
+      </div>
+
+      <!-- Card 2: Airlines & OTAs -->
+      <div class="stat-hover-card group">
+        <div class="stat-icon-wrap" style="background:#faf5ff">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" style="color:#7c3aed" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        </div>
+        <p class="stat-number" style="color:#7c3aed">500+</p>
+        <p class="stat-label">Airlines &amp; OTAs</p>
+        <p class="stat-desc">Major carriers and top online travel agencies</p>
+      </div>
+
+      <!-- Card 3: Countries Covered -->
+      <div class="stat-hover-card group">
+        <div class="stat-icon-wrap" style="background:#f0fdf4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" style="color:#16a34a" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <p class="stat-number" style="color:#16a34a">150+</p>
+        <p class="stat-label">Countries Covered</p>
+        <p class="stat-desc">Global routes on every major continent</p>
+      </div>
+
+      <!-- Card 4: Customer Support -->
+      <div class="stat-hover-card group">
+        <div class="stat-icon-wrap" style="background:#fff7ed">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" style="color:#ea580c" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        </div>
+        <p class="stat-number" style="color:#ea580c">24/7</p>
+        <p class="stat-label">Customer Support</p>
+        <p class="stat-desc">Expert travel agents ready to help any time</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION (image + text layout matching reference) -->
+<section class="py-20" style="background:#f7f9fc">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+
+      <!-- Left text -->
+      <div class="flex-1">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-5" style="color:#0D1B3E">About <span style="color:#1a6bff">Cheap Flights US</span></h2>
+        <p class="text-slate-600 leading-relaxed mb-4">Today's travelers want easy and cost-effective booking options. Cheap Flights US was created to facilitate air ticket booking more simply by assisting travelers to search for fares and reliable flights in one location.</p>
+        <p class="text-slate-600 leading-relaxed mb-4">Our platform lets users examine airplane ticket prices as well as evaluate the prices of airline tickets and make full online air ticket bookings securely. From domestic travel to international trips, we assist travelers in exploring cheap air ticket booking options and finding the cheapest prices for airfare.</p>
+        <p class="text-slate-600 leading-relaxed mb-6">No matter if you'd like to buy cheap flight tickets, book international flight tickets, or explore affordable flight choices, Cheap Flights US helps simplify the process of planning a trip.</p>
+        <a href="results.html" class="inline-flex items-center gap-2 font-bold text-sm px-6 py-3 rounded-xl text-white transition-all" style="background:#1a6bff;box-shadow:0 4px 14px rgba(26,107,255,.3)" onmouseover="this.style.background='#0054e0'" onmouseout="this.style.background='#1a6bff'">
+          Learn More <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Right: overlapping images -->
+      <div class="flex-shrink-0 relative w-full lg:w-[380px] h-[300px] lg:h-[360px]">
+        <!-- Background yellow circle -->
+        <div class="absolute top-0 right-0 w-[220px] h-[220px] rounded-full" style="background:#fef9c3;z-index:0"></div>
+        <!-- Couple image -->
+        <div class="absolute top-0 right-0 w-[210px] h-[270px] rounded-[2rem] overflow-hidden shadow-xl" style="z-index:1;border:3px solid #fff">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=500&q=80" alt="Travel couple" class="w-full h-full object-cover">
+        </div>
+        <!-- Airplane window image -->
+        <div class="absolute bottom-0 left-0 w-[190px] h-[200px] rounded-[2rem] overflow-hidden shadow-xl" style="z-index:2;border:3px solid #fff">
+          <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=500&q=80" alt="Airplane wing" class="w-full h-full object-cover">
+        </div>
+        <!-- Star decoration -->
+        <svg class="absolute" style="top:8px;left:60px;opacity:.3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a6bff" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAN'T FIND THE RIGHT FARE — Horizontal banner (matching reference) -->
+<section class="py-10" style="background:#f7f9fc">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="relative overflow-hidden rounded-2xl px-6 py-6 md:px-8 md:py-8 flex flex-col md:flex-row items-center gap-6" style="background:linear-gradient(120deg,#dbeafe 0%,#eff6ff 100%);border:1.5px solid #bfdbfe">
+      <!-- Person image -->
+      <div class="absolute right-60 bottom-0 h-full flex items-end hidden lg:flex" style="pointer-events:none">
+        <img src="assets/images/cta_person.jpg" alt="Travel expert" class="h-[160px] w-auto object-cover rounded-t-xl" style="filter:drop-shadow(0 4px 12px rgba(0,0,0,.12))">
+      </div>
+      <div class="flex-1 relative z-10 text-center md:text-left">
+        <h3 class="text-xl md:text-2xl font-extrabold mb-1.5" style="color:#0D1B3E">Can't Find the Right Fare?</h3>
+        <p class="text-slate-600 text-xs md:text-sm max-w-xs mx-auto md:mx-0">Our travel experts are available 24/7 to find you the best deal. Call us and save even more!</p>
+      </div>
+      <a href="tel:+1-888-885-5061" class="relative z-10 w-full md:w-auto justify-center flex items-center gap-2.5 font-bold text-white px-6 py-3.5 rounded-xl transition-all" style="background:#0D1B3E;box-shadow:0 4px 16px rgba(13,27,62,.25)" onmouseover="this.style.background='#1a3a7a'" onmouseout="this.style.background='#0D1B3E'">
+        <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        </span>
+        <span class="text-sm font-extrabold">+1-888-885-5061</span>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="py-20 bg-slate-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <span class="section-tag">Testimonials</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-navy mb-3">Trusted by Travelers Worldwide</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-card hover:shadow-hover transition-shadow">
+        <div class="flex gap-0.5 mb-4">★★★★★</div>
+        <p class="text-slate-600 text-sm leading-relaxed mb-5">"Saved over $200 compared to booking directly. The real-time prices are incredibly accurate. Will use Cheap Flights US for every trip!"</p>
+        <div class="border-t border-slate-100 pt-4"><p class="font-bold text-navy text-sm">Sarah M.</p><p class="text-xs text-slate-400 flex items-center gap-1 mt-0.5">✈ New York → London</p></div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-card hover:shadow-hover transition-shadow">
+        <div class="flex gap-0.5 mb-4">★★★★★</div>
+        <p class="text-slate-600 text-sm leading-relaxed mb-5">"Clean interface, fast results. Found a business class deal $400 cheaper than competitor sites. Highly recommend."</p>
+        <div class="border-t border-slate-100 pt-4"><p class="font-bold text-navy text-sm">James T.</p><p class="text-xs text-slate-400 flex items-center gap-1 mt-0.5">✈ Los Angeles → Tokyo</p></div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-card hover:shadow-hover transition-shadow">
+        <div class="flex gap-0.5 mb-4">★★★★★</div>
+        <p class="text-slate-600 text-sm leading-relaxed mb-5">"Multiple booking options for the same flight — I compared and chose the best OTA. Flew for less than expected!"</p>
+        <div class="border-t border-slate-100 pt-4"><p class="font-bold text-navy text-sm">Priya K.</p><p class="text-xs text-slate-400 flex items-center gap-1 mt-0.5">✈ Chicago → Dubai</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 bg-white" id="faq">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <span class="section-tag">FAQ</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-navy mb-3">Frequently Asked Questions</h2>
+    </div>
+    <div id="faqContainer"></div>
+  </div>
+</section>
+
+<!-- PRE-FOOTER CTA -->
+<section class="bg-gradient-to-r from-navy to-slate-800 text-white py-14">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <p class="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">Need Help Booking?</p>
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Can't Find the Right Fare?</h2>
+    <p class="text-slate-300 text-lg mb-8 max-w-xl mx-auto">Our travel experts are available 24/7 to find you the best international deals.</p>
+    <a href="tel:+1-888-885-5061" class="inline-flex items-center gap-3 bg-sky hover:bg-sky-600 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-blue transition-all duration-200 hover:scale-105">
+      <i data-lucide="phone" class="w-5 h-5"></i>
+      +1-888-885-5061
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navy text-slate-300 pt-14 pb-8">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div>
+        <a href="/" class="block mb-4">
+          <img src="assets/images/logo_footer.png" alt="Cheap Flights US" style="height:60px;width:auto" onerror="this.src='assets/images/logo.png'">
+        </a>
+        <p class="text-sm text-slate-400 leading-relaxed mb-5">Compare real-time international flight prices from top airlines and OTAs. Book smart, travel more.</p>
+        <a href="tel:+1-888-885-5061" class="flex items-center gap-2 text-sky-400 font-semibold text-sm hover:text-sky-300 transition-colors"><i data-lucide="phone" class="w-4 h-4"></i> +1-888-885-5061</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Popular Routes</h4>
+        <ul class="space-y-3 text-sm" id="footerRoutes"></ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Top Destinations</h4>
+        <ul class="space-y-3 text-sm" id="footerDests"></ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Company</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="about.html" class="flex items-center gap-2 hover:text-sky-400 transition-colors"><i data-lucide="info" class="w-3.5 h-3.5 text-sky-400"></i> About Us</a></li>
+          <li><a href="contact.html" class="flex items-center gap-2 hover:text-sky-400 transition-colors"><i data-lucide="mail" class="w-3.5 h-3.5 text-sky-400"></i> Contact Us</a></li>
+          <li><a href="privacy.html" class="flex items-center gap-2 hover:text-sky-400 transition-colors"><i data-lucide="shield" class="w-3.5 h-3.5 text-sky-400"></i> Privacy Policy</a></li>
+          <li><a href="terms.html" class="flex items-center gap-2 hover:text-sky-400 transition-colors"><i data-lucide="file-text" class="w-3.5 h-3.5 text-sky-400"></i> Terms &amp; Conditions</a></li>
+          <li><a href="cookies.html" class="flex items-center gap-2 hover:text-sky-400 transition-colors"><i data-lucide="cookie" class="w-3.5 h-3.5 text-sky-400"></i> Cookies Policy</a></li>
+          <li><a href="refund-policy.html" class="flex items-center gap-2 hover:text-sky-400 transition-colors"><i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-sky-400"></i> Refund Policy</a></li>
+          <li><a href="disclaimer.html" class="flex items-center gap-2 hover:text-sky-400 transition-colors"><i data-lucide="alert-circle" class="w-3.5 h-3.5 text-sky-400"></i> Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+      <p>&copy; 2026 Cheap Flights US. All rights reserved. &nbsp;|&nbsp; Designed &amp; Developed by <a href="https://www.adyorbit.com" target="_blank" rel="noopener" style="color:#93c5fd;text-decoration:none;font-weight:600">AdyOrbit</a></p>
+      <div class="flex flex-wrap gap-4">
+        <a href="privacy.html" class="hover:text-sky-400 transition-colors">Privacy</a>
+        <a href="terms.html" class="hover:text-sky-400 transition-colors">Terms</a>
+        <a href="cookies.html" class="hover:text-sky-400 transition-colors">Cookies</a>
+        <a href="refund-policy.html" class="hover:text-sky-400 transition-colors">Refunds</a>
+        <a href="disclaimer.html" class="hover:text-sky-400 transition-colors">Disclaimer</a>
+        <a href="contact.html" class="hover:text-sky-400 transition-colors">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=1.2"></script>
+<script src="assets/js/search.js?v=1.2"></script>
+<script>
+// ── Destinations data ───────────────────────────────────────
+// ── Destinations data (Matching reference image with 100% working URLs) ──
+const DESTS = [
+  {city:'Atlanta', code:'ATL', country:'United States', img:'https://images.unsplash.com/photo-1576085898323-218337e3e43c?auto=format&fit=crop&w=600&h=800&q=80', price:'$199'},
+  {city:'Statue of Liberty', code:'JFK', country:'New York', img:'https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=600&h=800&q=80', price:'$289'},
+  {city:'Los Angeles', code:'LAX', country:'California', img:'https://images.unsplash.com/photo-1580655653885-65763b2597d0?auto=format&fit=crop&w=600&h=800&q=80', price:'$249'},
+  {city:'Chicago', code:'ORD', country:'Illinois', img:'https://images.unsplash.com/photo-1494522855154-9297ac14b55f?auto=format&fit=crop&w=600&h=800&q=80', price:'$219'},
+  {city:'London', code:'LHR', country:'United Kingdom', img:'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&h=800&q=80', price:'$349'},
+  {city:'Dubai', code:'DXB', country:'United Arab Emirates', img:'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&h=800&q=80', price:'$419'},
+  {city:'Paris', code:'CDG', country:'France', img:'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&h=800&q=80', price:'$389'},
+  {city:'Tokyo', code:'NRT', country:'Japan', img:'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=600&h=800&q=80', price:'$549'}
+];
+
+const DEALS = [
+  {from:'JFK',to:'LHR',fromCity:'New York',toCity:'London',price:'from $299',tag:'10% OFF',date:'Sep 15'},
+  {from:'LAX',to:'DXB',fromCity:'Los Angeles',toCity:'Dubai',price:'from $389',tag:'Sale',date:'Sep 20'},
+  {from:'ORD',to:'CDG',fromCity:'Chicago',toCity:'Paris',price:'from $349',tag:'Best Deal',date:'Oct 5'},
+  {from:'MIA',to:'SIN',fromCity:'Miami',toCity:'Singapore',price:'from $529',tag:'Limited',date:'Oct 10'},
+  {from:'JFK',to:'NRT',fromCity:'New York',toCity:'Tokyo',price:'from $499',tag:'Hot',date:'Oct 15'},
+  {from:'SFO',to:'SYD',fromCity:'San Francisco',toCity:'Sydney',price:'from $649',tag:'Special',date:'Nov 1'},
+];
+
+const FAQS = [
+  ['Are these real flight prices?', 'Yes. All prices shown on Cheap Flights US are fetched in real-time from live airline and OTA data, aggregated from 500+ sources worldwide. Prices may change due to seat availability — book quickly to lock in your fare.'],
+  ['Why do I see multiple prices for the same flight?', 'Different booking providers (airlines and OTAs like Expedia, Kiwi, Booking.com) may offer slightly different prices for the same route. Cheap Flights US shows all available options so you can compare and choose the best.'],
+  ['Are prices shown in USD?', 'Yes. All prices on Cheap Flights US are displayed in USD for transparency, regardless of the route or destination country.'],
+  ['Do you charge booking fees?', 'Cheap Flights US is a flight comparison and booking assistance platform. Our expert travel agents help you find the best fares — call us at +1 (888) 885-5061 for exclusive phone-only rates.'],
+  ['How do I book a flight?', 'Simply Search → Compare → Select your preferred flight → Fill in passenger and payment details → Confirm your booking. Our 24/7 support team is also available by phone to assist you with booking.'],
+  ['Can I find international flights?', 'Absolutely. Cheap Flights US specializes in international routes — from New York to London, Dubai to Tokyo, Los Angeles to Paris, and hundreds of destinations across 150+ countries worldwide.'],
+];
+
+const ROUTES = [
+  {fromCity:'New York',toCity:'London',from:'JFK',to:'LHR'},
+  {fromCity:'Los Angeles',toCity:'Tokyo',from:'LAX',to:'NRT'},
+  {fromCity:'New York',toCity:'Dubai',from:'JFK',to:'DXB'},
+  {fromCity:'Chicago',toCity:'Paris',from:'ORD',to:'CDG'},
+  {fromCity:'Miami',toCity:'Singapore',from:'MIA',to:'SIN'},
+  {fromCity:'New York',toCity:'Bangkok',from:'JFK',to:'BKK'},
+];
+
+// ── Render destinations carousel (Infinite Smooth Marquee Slider) ──
+const destTrack = document.getElementById('destGrid');
+if (destTrack) {
+  const tripleDests = [...DESTS, ...DESTS, ...DESTS];
+  destTrack.innerHTML = tripleDests.map(d => `
+    <div class="carousel-card" style="padding-right:22px !important; box-sizing:border-box !important;">
+      <a href="results.html?from=JFK&from_name=New+York&to=${d.code}&to_name=${encodeURIComponent(d.city)}&dep=2026-09-15&trip=one-way&adults=1&cabin=economy"
+         class="dest-card group block relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300" style="height:330px;display:block">
+        <img src="${d.img}" alt="Flights to ${d.city}" loading="lazy"
+             style="width:100%;height:100%;object-fit:cover;transition:transform .5s ease"
+             class="group-hover:scale-105">
+        <!-- Gradient overlay matching reference -->
+        <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 45%, transparent 100%)"></div>
+        <!-- Bottom info matching reference -->
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:1.1rem 1.1rem">
+          <div style="display:flex;align-items:flex-end;justify-content:space-between">
+            <div>
+              <p style="color:#fff;font-weight:800;font-size:1.125rem;line-height:1.25;margin:0">${d.city}</p>
+              <p style="color:rgba(255,255,255,.8);font-size:.78rem;margin:.25rem 0 0;display:flex;align-items:center;gap:.3rem;font-weight:500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                ${d.country}
+              </p>
+            </div>
+            <!-- Circle Glass Arrow Badge -->
+            <div class="dest-card-arrow flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#ffffff" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  `).join('');
+
+  initDestCarousel();
+}
+
+function initDestCarousel() {
+  const container = document.getElementById('destCarouselContainer');
+  const track     = document.getElementById('destGrid');
+  const prevBtn   = document.getElementById('destPrevBtn');
+  const nextBtn   = document.getElementById('destNextBtn');
+  if (!track || !container) return;
+
+  let pos = 0;
+  let isPaused = false;
+  let animId = null;
+  const speed = 0.7; // px per frame continuous speed
+
+  function getSingleSetWidth() {
+    const cards = track.querySelectorAll('.carousel-card');
+    if (cards.length === 0) return 1000;
+    const singleCount = DESTS.length;
+    let width = 0;
+    for (let i = 0; i < singleCount; i++) {
+      width += cards[i].getBoundingClientRect().width;
+    }
+    return width || 1200;
+  }
+
+  function renderPos() {
+    track.style.transform = `translateX(-${pos}px)`;
+  }
+
+  function loop() {
+    if (!isPaused) {
+      pos += speed;
+      const setWidth = getSingleSetWidth();
+      if (pos >= setWidth) {
+        pos -= setWidth; // seamless continuous loop
+      }
+      renderPos();
+    }
+    animId = requestAnimationFrame(loop);
+  }
+
+  // Arrow controls
+  function stepSlide(direction) {
+    const card = track.querySelector('.carousel-card');
+    const cardWidth = card ? (card.getBoundingClientRect().width + (parseFloat(window.getComputedStyle(card).marginRight) || 16)) : 280;
+    pos += direction * cardWidth;
+    const setWidth = getSingleSetWidth();
+    if (pos < 0) pos += setWidth;
+    if (pos >= setWidth * 2) pos -= setWidth;
+    renderPos();
+  }
+
+  if (nextBtn) nextBtn.addEventListener('click', () => stepSlide(1));
+  if (prevBtn) prevBtn.addEventListener('click', () => stepSlide(-1));
+
+  container.addEventListener('mouseenter', () => { isPaused = true; });
+  container.addEventListener('mouseleave', () => { isPaused = false; });
+  container.addEventListener('touchstart', () => { isPaused = true; }, {passive:true});
+  container.addEventListener('touchend', () => { isPaused = false; });
+
+  animId = requestAnimationFrame(loop);
+}
+
+
+// ── Render deals ────────────────────────────────────────────
+document.getElementById('dealsGrid').innerHTML = DEALS.map(d => `
+  <a href="results.html?from=${d.from}&from_name=${encodeURIComponent(d.fromCity)}&to=${d.to}&to_name=${encodeURIComponent(d.toCity)}&dep=2026-09-15&trip=one-way&adults=1&cabin=economy"
+     class="bg-white rounded-2xl border border-slate-100 p-5 hover:shadow-hover hover:-translate-y-1 transition-all duration-200 group">
+    <div class="flex justify-between items-start mb-4">
+      <span class="text-xs font-bold text-sky bg-sky/10 px-2.5 py-1 rounded-full">${d.tag}</span>
+      <span class="text-xs text-slate-400">${d.date}</span>
+    </div>
+    <div class="flex items-center gap-3 mb-3">
+      <div class="text-center"><p class="text-xl font-extrabold text-navy">${d.from}</p><p class="text-xs text-slate-500">${d.fromCity}</p></div>
+      <div class="flex-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sky mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
+      <div class="text-center"><p class="text-xl font-extrabold text-navy">${d.to}</p><p class="text-xs text-slate-500">${d.toCity}</p></div>
+    </div>
+    <div class="flex items-center justify-between border-t border-slate-100 pt-3">
+      <span class="text-2xl font-extrabold text-navy">${d.price}</span>
+      <span class="text-xs font-semibold text-sky group-hover:text-navy transition-colors flex items-center gap-1">Search →</span>
+    </div>
+  </a>
+`).join('');
+
+// ── Render FAQ ──────────────────────────────────────────────
+document.getElementById('faqContainer').innerHTML = FAQS.map(f => `
+  <div class="faq-item">
+    <button class="faq-btn" type="button">
+      <span>${f[0]}</span>
+      <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky flex-shrink-0"></i>
+    </button>
+    <div class="faq-body">${f[1]}</div>
+  </div>
+`).join('');
+
+// ── Footer ──────────────────────────────────────────────────
+document.getElementById('footerRoutes').innerHTML = ROUTES.map(r => `
+  <li><a href="results.html?from=${r.from}&from_name=${encodeURIComponent(r.fromCity)}&to=${r.to}&to_name=${encodeURIComponent(r.toCity)}&dep=2026-09-15&trip=one-way&adults=1&cabin=economy"
+    class="flex items-center gap-2 hover:text-sky-400 transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-sky-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    ${r.fromCity} → ${r.toCity}
+  </a></li>
+`).join('');
+
+document.getElementById('footerDests').innerHTML = DESTS.map(d => `
+  <li><a href="results.html?to=${d.code}&to_name=${encodeURIComponent(d.city)}&dep=2026-09-15&trip=one-way&adults=1&cabin=economy"
+    class="flex items-center gap-2 hover:text-sky-400 transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-sky-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+    Flights to ${d.city}
+  </a></li>
+`).join('');
+
+// ── Search helpers ──────────────────────────────────────────
+const urlP = new URLSearchParams(location.search);
+if (urlP.get('to')) {
+  document.getElementById('destInput').value = (urlP.get('to_name')||'') + ' (' + urlP.get('to') + ')';
+  document.getElementById('destCode').value  = urlP.get('to');
+}
+if (urlP.get('from')) {
+  document.getElementById('originInput').value = (urlP.get('from_name')||'') + ' (' + urlP.get('from') + ')';
+  document.getElementById('originCode').value  = urlP.get('from');
+}
+
+lucide.createIcons();
+</script>
+
+<!-- ═══════════ STICKY BOTTOM CTA BAR ═══════════ -->
+<style>
+  .sticky-cta-bar{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(90deg,#0D1B3E 0%,#1a3a7a 100%);z-index:50;padding:.65rem 1rem;box-shadow:0 -4px 20px rgba(13,27,62,.2);}
+  .cta-agent-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#e0f0ff,#bfdbfe);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:2px solid rgba(255,255,255,.2);}
+  .cta-phone-circle{background:#1a6bff;color:#fff;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .18s;box-shadow:0 2px 8px rgba(26,107,255,.4);text-decoration:none;}
+  .cta-phone-circle:hover{background:#0054e0;transform:scale(1.08);}
+  body{padding-bottom:72px;}
+</style>
+<div class="sticky-cta-bar">
+  <div class="max-w-7xl mx-auto flex items-center gap-2.5">
+    <div class="cta-agent-avatar flex-shrink-0 overflow-hidden border-2 border-white/30 rounded-full" style="width:42px;height:42px">
+      <img src="assets/images/footer_sticky_agent.jpg" alt="Agent" class="w-full h-full object-cover">
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="text-white font-bold text-xs md:text-sm leading-tight truncate">Unlock Exclusive Flight Deals</p>
+      <p class="text-slate-300 text-[11px] md:text-xs truncate">Starting at <span class="text-green-400 font-extrabold">$199.00</span> &nbsp;·&nbsp; 24/7 Support</p>
+    </div>
+    <a href="tel:+1-888-885-5061" class="flex items-center gap-2 font-black text-xs px-3.5 py-2.5 rounded-xl transition-all flex-shrink-0 shadow-md" style="background:#1a6bff;color:#fff" title="Call Now">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      <span>+1-888-885-5061</span>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>

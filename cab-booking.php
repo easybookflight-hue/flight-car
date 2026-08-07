@@ -1,0 +1,819 @@
+<?php
+$pageTitle = 'Easy & Fast Online Car Rental & Airport Transfers | 24/7 Call Now Dispatch';
+$pageDesc  = 'Book cheap car rentals and luxury vehicle transfers online with instant 24/7 phone dispatch. Best flat rates for airport transfers, outstation rides, and city chauffeurs.';
+require_once __DIR__ . '/includes/header.php';
+?>
+
+<!-- ═══ EXECUTIVE PROMO TOP STRIP (REMOVED GOOGLE ADS SPECIAL) ═══ -->
+<div class="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-slate-950 text-[11px] sm:text-xs font-black py-2 px-3 shadow-sm border-b border-amber-600/30">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center sm:text-left">
+    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-1.5">
+      <span class="bg-slate-950 text-amber-400 text-[9px] font-black uppercase px-2.5 py-0.5 rounded-full tracking-wider">EXCLUSIVE PHONE DEAL</span>
+      <span>Flat <strong>$15 OFF</strong> Instant Booking Today! Mention Promo Code: <span class="underline decoration-slate-950 decoration-2 font-black">RENTAL15</span></span>
+    </div>
+    <a href="tel:<?= SUPPORT_PHONE ?>" class="inline-flex items-center gap-1 text-slate-950 hover:text-slate-800 font-extrabold underline text-[11px] shrink-0">
+      <i data-lucide="phone-call" class="w-3.5 h-3.5 animate-bounce"></i>
+      Claim Discount: <?= SUPPORT_PHONE ?>
+    </a>
+  </div>
+</div>
+
+<!-- ═══ HERO SECTION WITH RESPONSIVE FORM WIDGET ════════════════ -->
+<section class="relative bg-navy overflow-hidden text-white py-6 sm:py-10 md:py-16">
+  <!-- Background Image Overlay -->
+  <div class="absolute inset-0 z-0 opacity-20 bg-cover bg-center" style="background-image: url('assets/images/cab_hero.png');"></div>
+  <div class="absolute inset-0 z-0 bg-gradient-to-r from-navy via-navy/95 to-slate-900/90"></div>
+
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+      
+      <!-- HERO TEXT (LEFT - RESPONSIVE FOR MOBILE) -->
+      <div class="lg:col-span-6 space-y-4 sm:space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-xs font-semibold tracking-wide backdrop-blur-md max-w-full overflow-hidden">
+          <div class="flex items-center text-amber-400 shrink-0">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          </div>
+          <span class="font-extrabold text-amber-300">4.9/5</span>
+          <span class="text-slate-300 truncate">· 1,420+ Verified Reviews</span>
+        </div>
+
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-snug">
+          Easy &amp; Fast <span class="text-amber-400">Car Rental</span> Online
+        </h1>
+
+        <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">
+          Guaranteed flat rates for airport transfers, city chauffeurs, and outstation rides. No hidden charges &amp; 15-minute average pickup.
+        </p>
+
+        <!-- HIGHLY PROFESSIONAL 2x2 VALUE PROPOSITION GRID -->
+        <div class="grid grid-cols-2 gap-3 pt-1">
+          <div class="flex items-center gap-2.5 p-2.5 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
+            <div class="w-7 h-7 rounded-lg bg-amber-500/20 border border-amber-400/40 text-amber-400 flex items-center justify-center shrink-0">
+              <i data-lucide="clock" class="w-4 h-4"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-xs font-extrabold text-white">15-Min Pickup</p>
+              <p class="text-[10px] text-slate-400">Fastest airport &amp; city dispatch</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2.5 p-2.5 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
+            <div class="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-400/40 text-emerald-400 flex items-center justify-center shrink-0">
+              <i data-lucide="shield-check" class="w-4 h-4"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-xs font-extrabold text-white">No Surge Pricing</p>
+              <p class="text-[10px] text-slate-400">100% fixed transparent fares</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2.5 p-2.5 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
+            <div class="w-7 h-7 rounded-lg bg-sky-500/20 border border-sky-400/40 text-sky-400 flex items-center justify-center shrink-0">
+              <i data-lucide="user-check" class="w-4 h-4"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-xs font-extrabold text-white">Licensed Drivers</p>
+              <p class="text-[10px] text-slate-400">Vetted professional chauffeurs</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2.5 p-2.5 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
+            <div class="w-7 h-7 rounded-lg bg-amber-500/20 border border-amber-400/40 text-amber-400 flex items-center justify-center shrink-0">
+              <i data-lucide="plane-landing" class="w-4 h-4"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-xs font-extrabold text-white">Free Flight Tracking</p>
+              <p class="text-[10px] text-slate-400">Delay-free airport wait time</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- URGENT CALL NOW BOX -->
+        <div class="p-3.5 bg-white/10 border border-white/15 rounded-2xl backdrop-blur-md space-y-2">
+          <div class="flex items-center justify-center lg:justify-start gap-2 text-amber-300 font-extrabold text-xs uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            Prefer Phone Booking?
+          </div>
+          <p class="text-xs text-slate-300 text-center lg:text-left">Speak directly to our 24/7 hotline dispatcher for instant ride locking.</p>
+          <a href="tel:<?= SUPPORT_PHONE ?>" class="w-full inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-sm sm:text-base py-2.5 sm:py-3 rounded-xl shadow-lg transition-all hover:scale-[1.02] border border-amber-300">
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+            <span>CALL NOW: <?= SUPPORT_PHONE ?></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- COMPACT FORM WIDGET (NO HORIZONTAL OVERFLOW ON MOBILE) -->
+      <div class="lg:col-span-6 w-full overflow-hidden">
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200 text-slate-900 w-full max-w-full sm:max-w-lg lg:ml-auto">
+          
+          <!-- TOP RIDE TYPE SELECTOR TABS -->
+          <div class="grid grid-cols-2 bg-slate-800 text-white border-b border-slate-700 p-1 gap-1">
+            <button type="button" id="tabAirport" onclick="switchRideTab('Airport Transfer')" class="ride-tab active py-2 px-2 rounded-xl text-center transition-all bg-amber-500 text-slate-950 font-extrabold shadow">
+              <span class="block text-xs sm:text-sm font-black">Airport Transfer</span>
+              <span class="block text-[9px] sm:text-[10px] opacity-80 font-medium">Any Airport Pickup/Drop</span>
+            </button>
+            <button type="button" id="tabCity" onclick="switchRideTab('City & Outstation')" class="ride-tab py-2 px-2 rounded-xl text-center transition-all hover:bg-white/10 text-slate-300 font-semibold">
+              <span class="block text-xs sm:text-sm font-bold">City &amp; Outstation</span>
+              <span class="block text-[9px] sm:text-[10px] opacity-70 font-medium">Point to Point Rides</span>
+            </button>
+          </div>
+
+          <div class="p-3.5 sm:p-5 space-y-3">
+            
+            <!-- SUB-TRUST BAR -->
+            <div class="flex items-center justify-between text-[9px] sm:text-[11px] font-extrabold text-slate-600 border-b border-slate-100 pb-2">
+              <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-3 h-3 text-emerald-500"></i> Guaranteed Pickup</span>
+              <span class="flex items-center gap-1"><i data-lucide="zap" class="w-3 h-3 text-amber-500"></i> Instant Confirmation</span>
+              <span class="flex items-center gap-1"><i data-lucide="shield" class="w-3 h-3 text-sky-500"></i> Licensed &amp; Insured</span>
+            </div>
+
+            <!-- TRANSFER DIRECTION PILLS -->
+            <div>
+              <label class="block text-[10px] font-extrabold uppercase tracking-wider text-slate-600 mb-1">Transfer Direction</label>
+              <div class="grid grid-cols-2 gap-2">
+                <button type="button" id="dirTo" onclick="setDirection('To Airport / Destination')" class="direction-btn active flex items-center justify-center gap-1 py-1.5 rounded-xl font-extrabold text-[11px] sm:text-xs transition-all bg-amber-500 text-slate-950 shadow-sm truncate">
+                  <i data-lucide="plane-landing" class="w-3.5 h-3.5 shrink-0"></i>
+                  <span class="truncate">To Airport / Destination</span>
+                </button>
+                <button type="button" id="dirFrom" onclick="setDirection('From Airport / Origin')" class="direction-btn flex items-center justify-center gap-1 py-1.5 rounded-xl font-bold text-[11px] sm:text-xs transition-all bg-slate-100 hover:bg-slate-200 text-slate-700 truncate">
+                  <i data-lucide="plane-takeoff" class="w-3.5 h-3.5 shrink-0"></i>
+                  <span class="truncate">From Airport / Origin</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- VEHICLE TYPE CARDS -->
+            <div>
+              <label class="block text-[10px] font-extrabold uppercase tracking-wider text-slate-600 mb-1">Vehicle Type</label>
+              <div class="grid grid-cols-3 gap-1.5 sm:gap-2">
+                <button type="button" id="vCardSedan" onclick="selectVehicle('Sedan')" class="vehicle-card active border-2 border-amber-500 bg-amber-50 rounded-xl p-1.5 text-center transition-all">
+                  <span class="block font-black text-xs text-navy">Sedan</span>
+                  <span class="block text-[9px] text-slate-500 font-medium">1–4 guests</span>
+                  <span class="block text-[9px] text-amber-700 font-bold">2L + 2S bags</span>
+                </button>
+
+                <button type="button" id="vCardSUV" onclick="selectVehicle('SUV')" class="vehicle-card border-2 border-slate-200 bg-white hover:border-slate-300 rounded-xl p-1.5 text-center transition-all">
+                  <span class="block font-black text-xs text-navy">SUV</span>
+                  <span class="block text-[9px] text-slate-500 font-medium">1–6 guests</span>
+                  <span class="block text-[9px] text-slate-600 font-bold">3L + 2S bags</span>
+                </button>
+
+                <button type="button" id="vCardMaxi" onclick="selectVehicle('Maxi')" class="vehicle-card border-2 border-slate-200 bg-white hover:border-slate-300 rounded-xl p-1.5 text-center transition-all">
+                  <span class="block font-black text-xs text-navy">Maxi Van</span>
+                  <span class="block text-[9px] text-slate-500 font-medium">1–11 guests</span>
+                  <span class="block text-[9px] text-slate-600 font-bold">8L bags</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- EXACT 380x210px HIGH DEFINITION CAR PREVIEW BANNER (FULLY ENLARGED & RESPONSIVE) -->
+            <div class="relative w-full max-w-[380px] h-[210px] aspect-[380/210] mx-auto rounded-2xl overflow-hidden shadow-md group border border-slate-200 bg-slate-950">
+              <img id="carPreviewImg" src="assets/images/preview_sedan_380x210.png" alt="Vehicle Preview 380x210" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            </div>
+
+            <!-- SELECTED FLEET TEXT PLACED CLEANLY BELOW IMAGE -->
+            <div class="bg-slate-100 border border-slate-200 rounded-xl p-2 text-center">
+              <span class="bg-amber-500 text-slate-950 font-black text-[9px] px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-0.5">SELECTED FLEET</span>
+              <h4 id="carPreviewName" class="text-xs sm:text-sm font-extrabold text-navy truncate">Lexus ES250 / Executive Sedan or equivalent</h4>
+            </div>
+
+            <!-- PICKUP ADDRESS INPUT -->
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <label class="text-[10px] font-extrabold uppercase tracking-wider text-slate-600">Pickup Address *</label>
+                <span class="text-[9px] text-amber-600 font-bold">Enter address to see live fare</span>
+              </div>
+              <div class="relative">
+                <i data-lucide="map-pin" class="w-4 h-4 absolute left-3 top-2.5 text-amber-500"></i>
+                <input type="text" id="pickupAddress" oninput="updatePriceEstimate()" placeholder="Enter pickup address, airport, or hotel..." class="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all outline-none" required>
+              </div>
+            </div>
+
+            <!-- PICKUP DATE & TIME SELECTOR STEP 1: INITIAL BUTTON -->
+            <div id="dateTimeStepDefault">
+              <label class="block text-[10px] font-extrabold uppercase tracking-wider text-slate-600 mb-1">Pickup Date &amp; Time *</label>
+              <button type="button" onclick="showDateGrid()" class="w-full text-left py-2 px-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-400 text-xs font-medium hover:border-amber-400 flex items-center justify-between transition-all">
+                <span id="selectedDateTimeText">Pick a date &amp; time...</span>
+                <i data-lucide="calendar" class="w-4 h-4 text-amber-500"></i>
+              </button>
+            </div>
+
+            <!-- PICKUP DATE SELECTOR GRID (STEP 2) WITH INLINE NATIVE CALENDAR -->
+            <div id="dateGridContainer" class="hidden space-y-2 bg-slate-50 p-3 border border-slate-200 rounded-2xl">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-extrabold text-navy">Select Pickup Date *</span>
+                <button type="button" onclick="hideDateTimeGrids()" class="text-xs text-amber-600 font-bold hover:underline">← Back</button>
+              </div>
+              
+              <div class="grid grid-cols-3 sm:grid-cols-5 gap-1.5 text-center text-xs">
+                <button type="button" onclick="selectDate('Today', '7 Aug')" class="p-1.5 bg-white border border-slate-200 hover:border-amber-500 rounded-xl font-bold transition-all">
+                  <span class="block text-[9px] text-slate-400">Today</span>
+                  <span class="block text-xs text-navy">7 Aug</span>
+                </button>
+                <button type="button" onclick="selectDate('Tomorrow', '8 Aug')" class="p-1.5 bg-white border border-slate-200 hover:border-amber-500 rounded-xl font-bold transition-all">
+                  <span class="block text-[9px] text-slate-400">Tomorrow</span>
+                  <span class="block text-xs text-navy">8 Aug</span>
+                </button>
+                <button type="button" onclick="selectDate('Sun', '9 Aug')" class="p-1.5 bg-white border border-slate-200 hover:border-amber-500 rounded-xl font-bold transition-all">
+                  <span class="block text-[9px] text-slate-400">Sun</span>
+                  <span class="block text-xs text-navy">9 Aug</span>
+                </button>
+                <button type="button" onclick="selectDate('Mon', '10 Aug')" class="p-1.5 bg-white border border-slate-200 hover:border-amber-500 rounded-xl font-bold transition-all">
+                  <span class="block text-[9px] text-slate-400">Mon</span>
+                  <span class="block text-xs text-navy">10 Aug</span>
+                </button>
+                <button type="button" onclick="selectDate('Tue', '11 Aug')" class="p-1.5 bg-white border border-slate-200 hover:border-amber-500 rounded-xl font-bold transition-all">
+                  <span class="block text-[9px] text-slate-400">Tue</span>
+                  <span class="block text-xs text-navy">11 Aug</span>
+                </button>
+              </div>
+
+              <!-- INLINE CALENDAR INPUT FOR CUSTOM DATE SELECTION -->
+              <div class="pt-2 border-t border-slate-200">
+                <label class="block text-[10px] font-bold text-slate-600 mb-1">Or Choose Any Custom Date from Calendar:</label>
+                <input type="date" id="customDateInputInline" onchange="handleCustomDateChange(this)" class="w-full px-3 py-1.5 bg-white border border-amber-400 rounded-xl text-xs font-bold text-navy focus:ring-2 focus:ring-amber-500 outline-none">
+              </div>
+            </div>
+
+            <!-- TIME SLOT SELECTOR GRID (STEP 3) -->
+            <div id="timeGridContainer" class="hidden space-y-2 bg-slate-50 p-3 border border-slate-200 rounded-2xl">
+              <div class="flex items-center justify-between">
+                <span id="selectedDateHeader" class="text-xs font-extrabold text-navy">Saturday 8 August</span>
+                <button type="button" onclick="showDateGrid()" class="text-xs text-amber-600 font-bold hover:underline">← Change date</button>
+              </div>
+
+              <div class="grid grid-cols-4 gap-1 text-center text-xs max-h-36 overflow-y-auto p-1 border border-slate-200 rounded-xl bg-white">
+                <button type="button" onclick="selectTimeSlot('12:01 AM')" class="py-1.5 bg-slate-100 hover:bg-amber-400 hover:text-slate-950 font-bold rounded transition-all">12:01 AM</button>
+                <button type="button" onclick="selectTimeSlot('12:30 AM')" class="py-1.5 bg-slate-100 hover:bg-amber-400 hover:text-slate-950 font-bold rounded transition-all">12:30 AM</button>
+                <button type="button" onclick="selectTimeSlot('1:00 AM')" class="py-1.5 bg-slate-100 hover:bg-amber-400 hover:text-slate-950 font-bold rounded transition-all">1:00 AM</button>
+                <button type="button" onclick="selectTimeSlot('1:30 AM')" class="py-1.5 bg-slate-100 hover:bg-amber-400 hover:text-slate-950 font-bold rounded transition-all">1:30 AM</button>
+
+                <button type="button" onclick="selectTimeSlot('6:00 AM')" class="py-1.5 bg-amber-100 hover:bg-amber-400 hover:text-slate-950 font-bold rounded transition-all">6:00 AM</button>
+                <button type="button" onclick="selectTimeSlot('7:00 AM')" class="py-1.5 bg-amber-100 hover:bg-amber-400 hover:text-slate-950 font-bold rounded transition-all">7:00 AM</button>
+                <button type="button" onclick="selectTimeSlot('8:00 AM')" class="py-1.5 bg-amber-100 hover:bg-amber-400 hover:text-slate-950 font-bold rounded transition-all">8:00 AM</button>
+                <button type="button" onclick="selectTimeSlot('9:00 AM')" class="py-1.5 bg-amber-100 hover:bg-amber-400 hover:text-slate-950 font-bold rounded transition-all">9:00 AM</button>
+
+                <button type="button" onclick="selectTimeSlot('12:01 PM')" class="py-1.5 bg-amber-300 font-black text-slate-950 rounded shadow-sm border border-amber-400">12:01 PM ☀️</button>
+                <button type="button" onclick="selectTimeSlot('1:00 PM')" class="py-1.5 bg-amber-200 hover:bg-amber-400 text-slate-950 font-bold rounded transition-all">1:00 PM</button>
+                <button type="button" onclick="selectTimeSlot('2:00 PM')" class="py-1.5 bg-amber-200 hover:bg-amber-400 text-slate-950 font-bold rounded transition-all">2:00 PM</button>
+                <button type="button" onclick="selectTimeSlot('3:00 PM')" class="py-1.5 bg-amber-200 hover:bg-amber-400 text-slate-950 font-bold rounded transition-all">3:00 PM</button>
+                
+                <button type="button" onclick="selectTimeSlot('6:00 PM')" class="py-1.5 bg-slate-100 hover:bg-amber-400 font-bold rounded transition-all">6:00 PM</button>
+                <button type="button" onclick="selectTimeSlot('8:00 PM')" class="py-1.5 bg-slate-100 hover:bg-amber-400 font-bold rounded transition-all">8:00 PM</button>
+                <button type="button" onclick="selectTimeSlot('10:00 PM')" class="py-1.5 bg-slate-100 hover:bg-amber-400 font-bold rounded transition-all">10:00 PM</button>
+                <button type="button" onclick="selectTimeSlot('11:30 PM')" class="py-1.5 bg-slate-100 hover:bg-amber-400 font-bold rounded transition-all">11:30 PM</button>
+              </div>
+            </div>
+
+            <!-- YOUR FARE GUARANTEE BOX (INCLUDES 28% OFF PROMO) -->
+            <div class="relative bg-amber-50/80 border border-amber-300 rounded-2xl p-3 text-center pt-4">
+              <span class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-[9px] px-3 py-0.5 rounded-full uppercase tracking-wider shadow-sm border border-amber-300">
+                YOUR FARE · 28% OFF TODAY
+              </span>
+              <h4 id="fareHeadline" class="text-base sm:text-lg font-black text-navy mt-1">
+                Your <span class="text-amber-600">fixed price</span> appears here <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold ml-1">28% OFF</span>
+              </h4>
+              <p id="fareSubtext" class="text-[10px] text-slate-500 mt-0.5">Enter your address and select a time to lock your 28% discounted fare</p>
+              
+              <div class="mt-1.5 inline-flex items-center gap-1 bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                <i data-lucide="check" class="w-3 h-3 text-emerald-600"></i>
+                <span>No credit card required for booking</span>
+              </div>
+            </div>
+
+            <!-- PROCEED TO BOOK DETAILS BUTTON -->
+            <button type="button" onclick="showBookingDetailsModal()" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-black text-base py-3 rounded-xl shadow-lg transition-all hover:scale-[1.01]">
+              <i data-lucide="check-circle" class="w-4 h-4"></i>
+              <span>Book My Car Rental</span>
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESTORED: TRUST HIGHLIGHTS STRIP ════════════════════════ -->
+<section class="bg-amber-500 border-y border-amber-600/30 text-slate-950 py-3.5 shadow-inner">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center divide-x divide-slate-950/10">
+      <div class="px-2">
+        <p class="text-lg md:text-2xl font-black tracking-tight">15 MIN</p>
+        <p class="text-[10px] sm:text-xs font-bold uppercase text-slate-900/80">Average Pickup Time</p>
+      </div>
+      <div class="px-2">
+        <p class="text-lg md:text-2xl font-black tracking-tight">28% OFF</p>
+        <p class="text-[10px] sm:text-xs font-bold uppercase text-slate-900/80">Fixed Price Discount</p>
+      </div>
+      <div class="px-2">
+        <p class="text-lg md:text-2xl font-black tracking-tight">4.9 ★★★★★</p>
+        <p class="text-[10px] sm:text-xs font-bold uppercase text-slate-900/80">Google Verified Score</p>
+      </div>
+      <div class="px-2">
+        <p class="text-lg md:text-2xl font-black tracking-tight">24/7 HOTLINE</p>
+        <p class="text-[10px] sm:text-xs font-bold uppercase text-slate-900/80">Phone Dispatch Support</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESTORED: AIRPORT PICKUP & CHAUFFEUR CREATIVE SHOWCASE ═══ -->
+<section class="py-12 md:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
+        <img src="assets/images/cab_airport_pickup.png" loading="lazy" alt="Airport Pickup Chauffeur" class="w-full h-[320px] sm:h-[400px] object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-white space-y-2">
+          <span class="bg-amber-500 text-slate-950 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">VIP Airport Pickup</span>
+          <h3 class="text-xl sm:text-2xl font-extrabold">Meet &amp; Greet Airport Car Rental</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Our chauffeurs hold a personalized name sign at arrivals, handle your luggage, and escort you to a clean luxury car.</p>
+        </div>
+      </div>
+
+      <div class="space-y-5">
+        <span class="text-amber-600 text-xs font-black uppercase tracking-widest bg-amber-100 px-3 py-1 rounded-full border border-amber-200">Stress-Free Airport Rides</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy leading-tight">Never Miss a Flight or Wait for a Car Again</h2>
+        <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
+          Skip long taxi queues and unpredictable ride-share surges. Our dedicated airport car rental service monitors your flight arrival in real-time, ensuring your driver is waiting at the curb the moment you land.
+        </p>
+
+        <div class="space-y-3 pt-2">
+          <div class="flex items-start gap-3">
+            <div class="w-7 h-7 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold text-xs shrink-0">✓</div>
+            <div>
+              <h4 class="font-extrabold text-navy text-xs sm:text-sm">60-Minute Free Flight Delay Wait Time</h4>
+              <p class="text-xs text-slate-500">Flight delayed or baggage delayed? We wait for you at no extra charge.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-7 h-7 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold text-xs shrink-0">✓</div>
+            <div>
+              <h4 class="font-extrabold text-navy text-xs sm:text-sm">All Major Airports Covered</h4>
+              <p class="text-xs text-slate-500">Fast pickup &amp; drop transfers across 100+ airports nationwide.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="tel:<?= SUPPORT_PHONE ?>" class="inline-flex items-center gap-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-sm sm:text-base px-6 py-3 rounded-xl shadow-lg shadow-amber-500/20 transition-all hover:scale-105">
+            <i data-lucide="phone-call" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+            <span>CALL NOW FOR AIRPORT RENTAL</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESTORED: VEHICLE FLEET SHOWCASE (ENLARGED 380x210 ASPECT RATIO CARDS) ═══ -->
+<section class="py-12 md:py-20 bg-slate-50 border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4">
+    
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <span class="bg-sky-100 text-sky-700 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border border-sky-200 inline-block mb-2">Our Vehicle Fleet</span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy">Choose Your Car Rental &amp; Call to Reserve</h2>
+      <p class="text-slate-600 mt-2 text-xs sm:text-sm md:text-base">Select from economy sedans to luxury executive SUVs. All vehicles are sanitized, fully insured, and driven by licensed professional chauffeurs.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- FLEET CARD 1: SEDAN (ENLARGED 380x210 IMAGE COLUMN) -->
+      <div class="bg-white rounded-3xl border border-slate-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group hover:-translate-y-1">
+        <div class="relative h-52 sm:h-56 bg-slate-900 overflow-hidden">
+          <img src="assets/images/preview_sedan_380x210.png" loading="lazy" alt="Standard Sedan Car Rental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 right-3 bg-amber-500 text-slate-950 font-black text-xs px-3 py-1 rounded-full shadow">BEST VALUE</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+          <div>
+            <h3 class="text-lg font-extrabold text-navy">Standard Sedan</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Lexus ES250, Toyota Camry or similar</p>
+            <ul class="mt-3 space-y-2 text-xs text-slate-600 font-medium">
+              <li class="flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-sky-500"></i> Up to 4 Passengers</li>
+              <li class="flex items-center gap-2"><i data-lucide="briefcase" class="w-4 h-4 text-sky-500"></i> 2 Standard Luggage Bags</li>
+              <li class="flex items-center gap-2"><i data-lucide="wind" class="w-4 h-4 text-sky-500"></i> Climate Controlled AC</li>
+              <li class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-500"></i> Fully Insured &amp; GPS Tracked</li>
+            </ul>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 space-y-2.5">
+            <div class="flex items-baseline justify-between">
+              <span class="text-xs text-slate-500">Starting Rate</span>
+              <span class="text-xl font-black text-navy">$45 <span class="text-xs text-emerald-600 font-bold">(28% OFF)</span></span>
+            </div>
+            <a href="tel:<?= SUPPORT_PHONE ?>" class="w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-slate-800 text-white font-bold text-xs sm:text-sm py-2.5 rounded-xl transition-all shadow-md">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-amber-400"></i>
+              <span>CALL NOW TO BOOK</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLEET CARD 2: EXECUTIVE SUV (ENLARGED 380x210 IMAGE COLUMN) -->
+      <div class="bg-white rounded-3xl border border-slate-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group hover:-translate-y-1">
+        <div class="relative h-52 sm:h-56 bg-slate-900 overflow-hidden">
+          <img src="assets/images/preview_suv_380x210.png" loading="lazy" alt="Executive SUV Car Rental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 right-3 bg-sky-600 text-white font-black text-xs px-3 py-1 rounded-full shadow">POPULAR</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+          <div>
+            <h3 class="text-lg font-extrabold text-navy">Executive SUV</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Chevy Suburban, Cadillac Escalade</p>
+            <ul class="mt-3 space-y-2 text-xs text-slate-600 font-medium">
+              <li class="flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-sky-500"></i> Up to 6 Passengers</li>
+              <li class="flex items-center gap-2"><i data-lucide="briefcase" class="w-4 h-4 text-sky-500"></i> 5 Large Luggage Bags</li>
+              <li class="flex items-center gap-2"><i data-lucide="wifi" class="w-4 h-4 text-sky-500"></i> Free Onboard Wi-Fi</li>
+              <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-500"></i> Premium Leather Interior</li>
+            </ul>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 space-y-2.5">
+            <div class="flex items-baseline justify-between">
+              <span class="text-xs text-slate-500">Starting Rate</span>
+              <span class="text-xl font-black text-navy">$65 <span class="text-xs text-emerald-600 font-bold">(28% OFF)</span></span>
+            </div>
+            <a href="tel:<?= SUPPORT_PHONE ?>" class="w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-slate-800 text-white font-bold text-xs sm:text-sm py-2.5 rounded-xl transition-all shadow-md">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-amber-400"></i>
+              <span>CALL NOW TO BOOK</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLEET CARD 3: LUXURY CHAUFFEUR (ENLARGED 380x210 IMAGE COLUMN) -->
+      <div class="bg-white rounded-3xl border border-amber-300 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group hover:-translate-y-1 relative">
+        <div class="relative h-52 sm:h-56 bg-slate-900 overflow-hidden">
+          <img src="assets/images/cab_hero.png" loading="lazy" alt="Luxury Chauffeur Car" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 right-3 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs px-3 py-1 rounded-full shadow">VIP CLASS</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+          <div>
+            <h3 class="text-lg font-extrabold text-navy">Luxury Chauffeur</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Mercedes S-Class, BMW 7-Series</p>
+            <ul class="mt-3 space-y-2 text-xs text-slate-600 font-medium">
+              <li class="flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-amber-500"></i> Up to 3 VIP Guests</li>
+              <li class="flex items-center gap-2"><i data-lucide="user-check" class="w-4 h-4 text-amber-500"></i> Uniformed Private Driver</li>
+              <li class="flex items-center gap-2"><i data-lucide="coffee" class="w-4 h-4 text-amber-500"></i> Water &amp; Refreshments</li>
+              <li class="flex items-center gap-2"><i data-lucide="plane-landing" class="w-4 h-4 text-amber-500"></i> VIP Airport Meet &amp; Greet</li>
+            </ul>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 space-y-2.5">
+            <div class="flex items-baseline justify-between">
+              <span class="text-xs text-slate-500">Starting Rate</span>
+              <span class="text-xl font-black text-navy">$89 <span class="text-xs text-emerald-600 font-bold">(28% OFF)</span></span>
+            </div>
+            <a href="tel:<?= SUPPORT_PHONE ?>" class="w-full inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs sm:text-sm py-2.5 rounded-xl transition-all shadow-md">
+              <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+              <span>CALL NOW TO BOOK</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLEET CARD 4: PASSENGER VAN (ENLARGED 380x210 IMAGE COLUMN) -->
+      <div class="bg-white rounded-3xl border border-slate-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group hover:-translate-y-1">
+        <div class="relative h-52 sm:h-56 bg-slate-900 overflow-hidden">
+          <img src="assets/images/preview_van_380x210.png" loading="lazy" alt="Passenger Shuttle Van Rental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 right-3 bg-emerald-600 text-white font-black text-xs px-3 py-1 rounded-full shadow">GROUPS</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+          <div>
+            <h3 class="text-lg font-extrabold text-navy">Maxi Van Rental</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Mercedes Sprinter, Ford Transit</p>
+            <ul class="mt-3 space-y-2 text-xs text-slate-600 font-medium">
+              <li class="flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-sky-500"></i> Up to 11 Passengers</li>
+              <li class="flex items-center gap-2"><i data-lucide="briefcase" class="w-4 h-4 text-sky-500"></i> 8+ Large Luggage Bags</li>
+              <li class="flex items-center gap-2"><i data-lucide="map" class="w-4 h-4 text-sky-500"></i> Outstation &amp; Event Shuttle</li>
+              <li class="flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4 text-sky-500"></i> High Capacity &amp; Comfort</li>
+            </ul>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 space-y-2.5">
+            <div class="flex items-baseline justify-between">
+              <span class="text-xs text-slate-500">Starting Rate</span>
+              <span class="text-xl font-black text-navy">$95 <span class="text-xs text-emerald-600 font-bold">(28% OFF)</span></span>
+            </div>
+            <a href="tel:<?= SUPPORT_PHONE ?>" class="w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-slate-800 text-white font-bold text-xs sm:text-sm py-2.5 rounded-xl transition-all shadow-md">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-amber-400"></i>
+              <span>CALL NOW TO BOOK</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESTORED: 24/7 CALL CENTER DISPATCH TEAM BANNER ═════════ -->
+<section class="py-12 md:py-16 bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="bg-gradient-to-r from-slate-900 to-navy text-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-800 flex flex-col md:flex-row items-center gap-6 justify-between text-center md:text-left">
+      
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-amber-400 shadow-xl shrink-0">
+          <img src="assets/images/cab_call_agent.png" loading="lazy" alt="Live Call Agent Support" class="w-full h-full object-cover">
+        </div>
+        <div class="space-y-1">
+          <span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-emerald-400/30 inline-flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> 24/7 Hotline Live
+          </span>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-white">Speak to Our Live Car Rental Dispatcher</h3>
+          <p class="text-xs text-slate-300 max-w-md">Our telephone agents answer instantly to lock in your ride details and assign the nearest driver.</p>
+        </div>
+      </div>
+
+      <a href="tel:<?= SUPPORT_PHONE ?>" class="w-full md:w-auto inline-flex items-center justify-center gap-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-base sm:text-lg px-7 py-3.5 rounded-2xl shadow-xl transition-all hover:scale-105 shrink-0 border border-amber-300">
+        <i data-lucide="phone-call" class="w-5 h-5 animate-bounce"></i>
+        <span>CALL NOW: <?= SUPPORT_PHONE ?></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STEP 4: PASSENGER DETAILS MODAL (CONNECTED TO API & GOOGLE SHEETS) ═══ -->
+<div id="bookingDetailsModal" class="fixed inset-0 z-[100] hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+  <div class="bg-white rounded-3xl max-w-lg w-full p-4 sm:p-7 space-y-3 sm:space-y-4 shadow-2xl relative border border-slate-200 my-auto max-h-[85vh] sm:max-h-[90vh] overflow-y-auto text-slate-900 pb-6">
+    <button type="button" onclick="closeBookingDetailsModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1 rounded-full hover:bg-slate-100 transition-colors">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+
+    <div class="text-center border-b border-slate-100 pb-2.5">
+      <span class="text-[10px] font-black uppercase tracking-widest text-amber-600">Step 2 of 2 · Final Confirmation</span>
+      <h3 class="text-lg sm:text-2xl font-extrabold text-navy mt-0.5">Passenger &amp; Rental Details</h3>
+      <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">Instant dispatch. Pay driver directly by cash or card.</p>
+    </div>
+
+    <!-- SUCCESS NOTIFICATION BOX (HIDDEN INITIALLY) -->
+    <div id="bookingSuccessBox" class="hidden bg-emerald-50 border border-emerald-300 rounded-2xl p-4 text-center space-y-3">
+      <div class="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto shadow-md">
+        <i data-lucide="check-circle-2" class="w-7 h-7"></i>
+      </div>
+      <h4 class="text-lg font-black text-emerald-950">Reservation Received Successfully!</h4>
+      <p class="text-xs text-emerald-800 leading-relaxed">Your lead details have been logged and sent to dispatch. Click below to call immediately and lock your 15-min driver arrival!</p>
+      <a href="tel:<?= SUPPORT_PHONE ?>" class="w-full flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-base py-3 rounded-xl shadow-lg border border-amber-300">
+        <i data-lucide="phone-call" class="w-5 h-5 animate-bounce"></i>
+        <span>CALL NOW TO DISPATCH: <?= SUPPORT_PHONE ?></span>
+      </a>
+    </div>
+
+    <form id="carBookingForm" onsubmit="handleLeadSubmit(event)" class="space-y-3">
+      <div>
+        <label class="block text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">Full Name *</label>
+        <input type="text" id="custName" placeholder="e.g. John Smith" class="w-full px-3 py-1.5 sm:py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium focus:ring-2 focus:ring-amber-500 outline-none" required>
+      </div>
+
+      <div>
+        <label class="block text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">Phone Number *</label>
+        <input type="tel" id="custPhone" placeholder="e.g. +1 (555) 000-0000" class="w-full px-3 py-1.5 sm:py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium focus:ring-2 focus:ring-amber-500 outline-none" required>
+      </div>
+
+      <div>
+        <label class="block text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">Email Address *</label>
+        <input type="email" id="custEmail" placeholder="john@example.com" class="w-full px-3 py-1.5 sm:py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium focus:ring-2 focus:ring-amber-500 outline-none" required>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-3 space-y-2">
+        <div>
+          <h4 class="font-bold text-navy text-xs">Optional Details</h4>
+          <p class="text-[10px] text-slate-500">Helps us assign your driver faster.</p>
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-bold text-slate-600 mb-1">Flight Number</label>
+          <input type="text" id="custFlight" placeholder="e.g. AA123 / DL456" class="w-full px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-medium outline-none">
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-bold text-slate-600 mb-1">Special Requests | Details</label>
+          <textarea id="custNotes" rows="2" placeholder="e.g. Need child seat, Have extra luggage..." class="w-full p-2 bg-white border border-slate-200 rounded-lg text-xs font-medium outline-none resize-none"></textarea>
+        </div>
+      </div>
+
+      <div class="space-y-2 pt-1 pb-2">
+        <a href="tel:<?= SUPPORT_PHONE ?>" class="w-full flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs sm:text-base py-2.5 sm:py-3 rounded-xl shadow-lg border border-amber-300">
+          <i data-lucide="phone-call" class="w-4 h-4 sm:w-5 sm:h-5 animate-bounce"></i>
+          <span>CALL NOW TO DISPATCH: <?= SUPPORT_PHONE ?></span>
+        </a>
+
+        <button type="submit" id="btnSubmitLead" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm py-2.5 rounded-xl transition-all">
+          <i data-lucide="check" class="w-4 h-4"></i>
+          <span>Confirm &amp; Send My Reservation</span>
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<!-- ═══ STICKY BOTTOM FOOTER CTA BAR (LOWER Z-INDEX Z-40 SO MODAL COVERS IT COMPLETELY) ════ -->
+<div id="stickyFooterCta" class="fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-xl border-t-2 border-amber-500 py-2.5 px-3 shadow-2xl">
+  <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+    <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+      <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-amber-400 shrink-0 relative">
+        <img src="assets/images/cab_call_agent.png" loading="lazy" alt="Agent Support" class="w-full h-full object-cover">
+        <span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-emerald-400 border border-slate-950"></span>
+      </div>
+      <div class="min-w-0">
+        <p class="font-extrabold text-white text-xs sm:text-sm flex items-center gap-1 truncate">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping inline-block shrink-0"></span>
+          24/7 Car Rental Dispatch
+        </p>
+        <p class="text-[9px] sm:text-xs text-amber-300 font-medium truncate">15-min pickup &amp; 28% OFF flat rates</p>
+      </div>
+    </div>
+
+    <a href="tel:<?= SUPPORT_PHONE ?>" class="inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs sm:text-sm px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-xl shadow-lg transition-all hover:scale-105 shrink-0 border border-amber-300">
+      <i data-lucide="phone-call" class="w-3.5 h-3.5 animate-bounce"></i>
+      <span>Call Now</span>
+    </a>
+  </div>
+</div>
+
+<!-- JAVASCRIPT FOR INTERACTIVE WIDGET & GOOGLE SHEETS AJAX SUBMIT -->
+<script>
+  let activeVehicle = 'Sedan';
+  let activeDirection = 'To Airport / Destination';
+  let activeRideTab = 'Airport Transfer';
+  let selectedDate = '';
+  let selectedTime = '';
+
+  const carData = {
+    Sedan: {
+      name: 'Lexus ES250 / Executive Sedan or equivalent',
+      img: 'assets/images/preview_sedan_380x210.png',
+      base: 45
+    },
+    SUV: {
+      name: 'Chevy Suburban / Cadillac Escalade or equivalent',
+      img: 'assets/images/preview_suv_380x210.png',
+      base: 65
+    },
+    Maxi: {
+      name: 'Ford Transit / Mercedes Sprinter Passenger Van',
+      img: 'assets/images/preview_van_380x210.png',
+      base: 95
+    }
+  };
+
+  function switchRideTab(tabType) {
+    activeRideTab = tabType;
+    document.querySelectorAll('.ride-tab').forEach(b => {
+      b.classList.remove('bg-amber-500', 'text-slate-950', 'font-extrabold', 'shadow');
+      b.classList.add('hover:bg-white/10', 'text-slate-300', 'font-semibold');
+    });
+    const btn = document.getElementById(tabType === 'Airport Transfer' ? 'tabAirport' : 'tabCity');
+    btn.classList.add('bg-amber-500', 'text-slate-950', 'font-extrabold', 'shadow');
+    updatePriceEstimate();
+  }
+
+  function setDirection(dir) {
+    activeDirection = dir;
+    document.getElementById('dirTo').className = 'direction-btn flex items-center justify-center gap-1 py-1.5 rounded-xl font-bold text-[11px] sm:text-xs transition-all truncate ' + (dir.includes('To') ? 'bg-amber-500 text-slate-950 shadow-sm font-extrabold' : 'bg-slate-100 hover:bg-slate-200 text-slate-700');
+    document.getElementById('dirFrom').className = 'direction-btn flex items-center justify-center gap-1 py-1.5 rounded-xl font-bold text-[11px] sm:text-xs transition-all truncate ' + (dir.includes('From') ? 'bg-amber-500 text-slate-950 shadow-sm font-extrabold' : 'bg-slate-100 hover:bg-slate-200 text-slate-700');
+    updatePriceEstimate();
+  }
+
+  function selectVehicle(vType) {
+    activeVehicle = vType;
+    ['Sedan', 'SUV', 'Maxi'].forEach(t => {
+      const card = document.getElementById('vCard' + t);
+      if (t === vType) {
+        card.className = 'vehicle-card active border-2 border-amber-500 bg-amber-50 rounded-xl p-1.5 text-center transition-all';
+      } else {
+        card.className = 'vehicle-card border-2 border-slate-200 bg-white hover:border-slate-300 rounded-xl p-1.5 text-center transition-all';
+      }
+    });
+
+    const info = carData[vType];
+    document.getElementById('carPreviewImg').src = info.img;
+    document.getElementById('carPreviewName').textContent = info.name;
+    updatePriceEstimate();
+  }
+
+  function showDateGrid() {
+    document.getElementById('dateTimeStepDefault').classList.add('hidden');
+    document.getElementById('dateGridContainer').classList.remove('hidden');
+    document.getElementById('timeGridContainer').classList.add('hidden');
+  }
+
+  function hideDateTimeGrids() {
+    document.getElementById('dateTimeStepDefault').classList.remove('hidden');
+    document.getElementById('dateGridContainer').classList.add('hidden');
+    document.getElementById('timeGridContainer').classList.add('hidden');
+  }
+
+  function selectDate(label, dateStr) {
+    selectedDate = dateStr;
+    document.getElementById('selectedDateHeader').textContent = 'Selected: ' + label + ' (' + dateStr + ')';
+    document.getElementById('dateGridContainer').classList.add('hidden');
+    document.getElementById('timeGridContainer').classList.remove('hidden');
+  }
+
+  function handleCustomDateChange(inputElem) {
+    if (inputElem.value) {
+      const parts = inputElem.value.split('-');
+      const formatted = parts[2] + '/' + parts[1] + '/' + parts[0];
+      selectDate('Custom Date', formatted);
+    }
+  }
+
+  function selectTimeSlot(timeStr) {
+    selectedTime = timeStr;
+    document.getElementById('selectedDateTimeText').textContent = selectedDate + ' at ' + selectedTime;
+    document.getElementById('selectedDateTimeText').classList.remove('text-slate-400');
+    document.getElementById('selectedDateTimeText').classList.add('text-navy', 'font-extrabold');
+    hideDateTimeGrids();
+    updatePriceEstimate();
+  }
+
+  function updatePriceEstimate() {
+    const addr = document.getElementById('pickupAddress').value.trim();
+    const fareHeadline = document.getElementById('fareHeadline');
+    const fareSubtext = document.getElementById('fareSubtext');
+
+    if (addr.length > 2 && selectedTime) {
+      const base = carData[activeVehicle].base;
+      fareHeadline.innerHTML = '$' + base + '.00 <span class="text-emerald-600 text-base sm:text-lg font-bold">Guaranteed Fixed Price (28% OFF)</span>';
+      fareSubtext.textContent = 'Flat rate locked for ' + activeVehicle + ' ride (' + activeRideTab + ')';
+    }
+  }
+
+  function showBookingDetailsModal() {
+    document.getElementById('bookingDetailsModal').classList.remove('hidden');
+    const stickyCta = document.getElementById('stickyFooterCta');
+    if (stickyCta) stickyCta.style.display = 'none';
+  }
+
+  function closeBookingDetailsModal() {
+    document.getElementById('bookingDetailsModal').classList.add('hidden');
+    const stickyCta = document.getElementById('stickyFooterCta');
+    if (stickyCta) stickyCta.style.display = 'block';
+  }
+
+  function handleLeadSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('btnSubmitLead');
+    btn.disabled = true;
+    btn.innerHTML = '<i data-lucide="loader" class="w-4 h-4 animate-spin"></i> Saving Lead...';
+
+    const payload = {
+      action: 'cab_booking',
+      timestamp: new Date().toLocaleString(),
+      ride_type: activeRideTab,
+      direction: activeDirection,
+      vehicle_type: activeVehicle,
+      pickup_address: document.getElementById('pickupAddress').value.trim(),
+      pickup_date: selectedDate || 'Asap Today',
+      pickup_time: selectedTime || 'Immediate',
+      estimated_fare: '$' + carData[activeVehicle].base + '.00',
+      name: document.getElementById('custName').value.trim(),
+      phone: document.getElementById('custPhone').value.trim(),
+      email: document.getElementById('custEmail').value.trim(),
+      flight_number: document.getElementById('custFlight').value.trim(),
+      special_notes: document.getElementById('custNotes').value.trim()
+    };
+
+    const gsheetUrl = 'https://script.google.com/macros/s/AKfycbwXrpFzBRCcWArtGt2XdaLhIfrv__EyefPLfgMBclcbmZEPrRBVIkl6QJaQV7pInCYU/exec';
+
+    // 1. Post to direct Google Apps Script Web App
+    fetch(gsheetUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(err => console.log('Google sheet direct post complete.'));
+
+    // 2. Post to API endpoint
+    fetch('api/save-cab-booking.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('carBookingForm').classList.add('hidden');
+      document.getElementById('bookingSuccessBox').classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+    })
+    .catch(err => {
+      document.getElementById('carBookingForm').classList.add('hidden');
+      document.getElementById('bookingSuccessBox').classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+    });
+  }
+</script>
+
+<?php require_once __DIR__ . '/includes/footer.php'; ?>

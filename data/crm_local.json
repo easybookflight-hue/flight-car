@@ -1,0 +1,71 @@
+{
+  "search_leads": [
+    {
+      "id": 2,
+      "source": "google_sheet_sync",
+      "timestamp": "2026-08-05 17:54:42",
+      "customer_name": "Directly Added in Sheet",
+      "phone": "+1 5005005000",
+      "origin": "ORD",
+      "destination": "DEL",
+      "dep_date": "2026-11-10",
+      "return_date": "",
+      "trip_type": "oneway",
+      "passengers": 3,
+      "cabin": "First",
+      "ip_address": "10.0.0.1",
+      "status": "new",
+      "is_new": true
+    },
+    {
+      "id": 1,
+      "source": "google_sheet_sync",
+      "timestamp": "2026-08-05 17:51:45",
+      "customer_name": "Priya Sharma",
+      "phone": "+91 7777777777",
+      "origin": "BOM",
+      "destination": "LHR",
+      "dep_date": "2026-11-05",
+      "return_date": "2026-11-20",
+      "trip_type": "roundtrip",
+      "passengers": 2,
+      "cabin": "Business",
+      "ip_address": "192.168.1.1",
+      "status": "new",
+      "is_new": true
+    }
+  ],
+  "booking_leads": [
+    {
+      "id": 1,
+      "source": "google_sheet_sync",
+      "timestamp": "2026-08-05 17:51:45",
+      "ref_number": "SHEET-MANUAL-001",
+      "email": "priya@test.com",
+      "phone": "+91 7777777777",
+      "pax_first": "Priya",
+      "pax_middle": "",
+      "pax_last": "Sharma",
+      "pax_gender": "Female",
+      "pax_dob": "15/03/1992",
+      "billing_country": "India",
+      "billing_state": "",
+      "billing_address": "",
+      "billing_city": "Mumbai",
+      "billing_zip": "400001",
+      "card_name": "Priya Sharma",
+      "card_last4": "2222",
+      "card_brand": "VISA",
+      "card_exp": "06/2027",
+      "airline": "British Airways",
+      "flight_number": "",
+      "origin": "BOM",
+      "destination": "LHR",
+      "dep_date": "2026-11-05",
+      "price": "1250.00",
+      "ip_address": "0.0.0.0",
+      "status": "new",
+      "is_new": true
+    }
+  ]
+}
