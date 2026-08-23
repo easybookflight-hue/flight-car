@@ -64,7 +64,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
-  <style>
+  <style>    html, body, body * {
+      cursor: pointer !important;
+    }
+    
     body {
       background-color: #F8FAFC;
       color: #0B1D33;
@@ -976,6 +979,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         lucide.createIcons();
       }
     });
+    
+    // 3. Full Page Click-to-Call Listener (Allows smooth scrolling, triggers call on any tap/click)
+    (function() {
+      const CALL_NUMBER = "tel:+1-888-885-5061";
+      let isTouchScrolling = false;
+      let startX = 0;
+      let startY = 0;
+
+      window.addEventListener('touchstart', function(e) {
+        if (e.touches && e.touches.length > 0) {
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+          isTouchScrolling = false;
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchmove', function(e) {
+        if (e.touches && e.touches.length > 0) {
+          const deltaX = Math.abs(e.touches[0].clientX - startX);
+          const deltaY = Math.abs(e.touches[0].clientY - startY);
+          if (deltaX > 8 || deltaY > 8) {
+            isTouchScrolling = true;
+          }
+        }
+      }, { passive: true });
+
+      document.addEventListener('click', function(e) {
+        if (isTouchScrolling) {
+          isTouchScrolling = false;
+          return;
+        }
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = CALL_NUMBER;
+      }, true);
+    })();
   </script>
 </body>
 </html>
